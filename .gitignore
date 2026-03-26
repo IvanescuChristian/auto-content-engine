@@ -1,16 +1,12 @@
-# Python
 __pycache__/
 *.py[cod]
 *$py.class
 venv/
 .venv/
 env/
-
-# Sisteme de operare
+.env
 .DS_Store
 Thumbs.db
-
-# Date locale (Video/Audio generate)
 assets/output/
 *.mp4
 *.mp3

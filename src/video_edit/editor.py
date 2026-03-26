@@ -1,83 +1,109 @@
 import os
 import random
-from moviepy import AudioFileClip, ImageClip, concatenate_videoclips, CompositeAudioClip, CompositeVideoClip
+from moviepy import AudioFileClip, ImageClip, concatenate_videoclips, CompositeAudioClip
 
-def apply_ken_burns_no_bars(clip, duration, VIDEO_SIZE):
-    zoom_ratio = 0.08
-    overscan = 0.1
+VIDEO_SIZE = (1920, 1080)
 
-    base_clip = clip.resized(height=VIDEO_SIZE[1] * (1 + overscan))
-    centered_base = base_clip.with_duration(duration).with_position('center')
-
-    if random.random() > 0.5:
-        panning_clip = centered_base.resized(
-            lambda t: 1 + (zoom_ratio * t / duration)
-        )
-    else:
-        panning_clip = centered_base.resized(
-            lambda t: (1 + zoom_ratio) - (zoom_ratio * t / duration)
-        )
-
-    final_view = panning_clip.cropped(width=VIDEO_SIZE[0], height=VIDEO_SIZE[1], x_center=panning_clip.w/2, y_center=panning_clip.h/2)
+def apply_ken_burns_no_bars(clip, duration, video_size=VIDEO_SIZE):
+    """
+    Ken Burns effect care GARANTEAZA full-screen fara black bars.
+    Functioneaza pe orice imagine — portrait, landscape, patrat.
+    Strategia: scale to COVER (nu contain), apoi crop centrat.
+    """
+    zoom_ratio = 0.06
     
-    return final_view
+    # Calculeaza scale factor ca sa ACOPERE tot frame-ul
+    # (ca CSS background-size: cover)
+    w, h = clip.w, clip.h
+    target_w, target_h = video_size
+    
+    scale_w = target_w / w
+    scale_h = target_h / h
+    # Ia maximul ca sa acopere tot + extra pt zoom headroom
+    base_scale = max(scale_w, scale_h) * (1.15 + zoom_ratio)
+    
+    # Aplica scale
+    scaled = clip.resized(base_scale)
+    scaled = scaled.with_duration(duration)
+    
+    # Ken Burns: zoom in sau zoom out
+    if random.random() > 0.5:
+        animated = scaled.resized(lambda t: 1 + (zoom_ratio * t / duration))
+    else:
+        animated = scaled.resized(lambda t: (1 + zoom_ratio) - (zoom_ratio * t / duration))
+    
+    # Crop centrat la exact 1920x1080
+    final = animated.cropped(
+        width=target_w, height=target_h,
+        x_center=animated.w / 2, y_center=animated.h / 2
+    )
+    
+    return final
 
-def create_video():
-    audio_path = "video_final.mp3"
+
+def create_video(scene_duration=25):
+    """
+    Asambleaza video final din audio + imagini.
+    """
+    # Kokoro WAV, fallback MP3
+    audio_path = "video_final.wav"
+    if not os.path.exists(audio_path):
+        audio_path = "video_final.mp3"
+
     pool_dir = "assets/curated_pool"
     music_path = "assets/music/background.mp3"
     output_path = "final_video.mp4"
-    
-    SCENE_DURATION = 25
-    VIDEO_SIZE = (1920, 1080) # 16:9 aspect ratio (standard landscape)
 
     if not os.path.exists(audio_path):
-        raise FileNotFoundError("Audio file missing.")
-    
-    if not os.path.exists(pool_dir) or not os.listdir(pool_dir):
-        raise FileNotFoundError(f"Missing images in {pool_dir}")
+        raise FileNotFoundError("Audio file missing. Run voice generation first.")
 
-    print("Preparing audio...")
+    if not os.path.exists(pool_dir) or not os.listdir(pool_dir):
+        raise FileNotFoundError(f"No images in {pool_dir}. Run downloader first.")
+
+    print(f"Preparing audio from {audio_path}...")
     voice_clip = AudioFileClip(audio_path)
     total_duration = voice_clip.duration
-    
     final_audio = voice_clip
 
+    # Background music (optional)
     if os.path.exists(music_path):
         try:
             background_music = AudioFileClip(music_path).with_duration(total_duration)
-            background_music = background_music.with_volume_scaled(0.15) 
+            background_music = background_music.with_volume_scaled(0.15)
             final_audio = CompositeAudioClip([voice_clip, background_music])
-            print("Music mixed successfully.")
+            print("Background music mixed.")
         except Exception:
             pass
 
-    source_images = [os.path.join(pool_dir, img) for img in sorted(os.listdir(pool_dir)) if img.endswith(('jpg', 'png', 'jpeg'))]
-    
-    num_scenes_needed = int(total_duration / SCENE_DURATION) + 1
-    print(f"Creating {num_scenes_needed} scenes using {len(source_images)} source images.")
+    # Sorteaza imaginile
+    source_images = sorted([
+        os.path.join(pool_dir, img) for img in os.listdir(pool_dir)
+        if img.lower().endswith(('jpg', 'png', 'jpeg'))
+    ])
+
+    num_scenes = int(total_duration / scene_duration) + 1
+    print(f"Total: {total_duration:.0f}s | {scene_duration}s/scene | {num_scenes} scenes | {len(source_images)} images")
 
     clips = []
-    
-    for i in range(num_scenes_needed):
+    for i in range(num_scenes):
         img_path = source_images[i % len(source_images)]
-        
         img_clip = ImageClip(img_path)
-        
-        current_scene_duration = SCENE_DURATION
-        if i == num_scenes_needed - 1:
-            current_scene_duration = total_duration - (i * SCENE_DURATION)
-            if current_scene_duration <= 0: break
 
-        cinematic_clip = apply_ken_burns_no_bars(img_clip, current_scene_duration, VIDEO_SIZE)
-        
+        current_duration = scene_duration
+        if i == num_scenes - 1:
+            current_duration = total_duration - (i * scene_duration)
+            if current_duration <= 0:
+                break
+
+        print(f"  Scene {i+1}: {os.path.basename(img_path)} ({img_clip.w}x{img_clip.h}) -> {current_duration:.1f}s")
+        cinematic_clip = apply_ken_burns_no_bars(img_clip, current_duration)
         clips.append(cinematic_clip)
 
     print("Assembling final video...")
     video = concatenate_videoclips(clips, method="compose")
     video = video.with_audio(final_audio)
 
-    print("Starting cinematic rendering (no bars)... This will take several minutes.")
+    print("Rendering final_video.mp4 ...")
     video.write_videofile(output_path, fps=24, codec="libx264", audio_codec="aac", threads=4)
-    print("Video generation successful! No letterboxing.")
+    print(f"DONE! Output: {output_path}")
     return output_path

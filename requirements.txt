@@ -1,5 +1,8 @@
+kokoro>=0.9.4
+soundfile
 google-generativeai
-moviepy
-gTTS
+google-genai
 python-dotenv
-Pillow
+moviepy
+requests
+selenium

@@ -1,0 +1,14 @@
+Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
+cd "D:\Python projects\Auto_Content_Engine\auto-content-engine"
+.\kokoro_env\Scripts\Activate.ps1
+pip install kokoro soundfile
+python test_voice.py
+//all in powershell
+
+De acum încolo de fiecare dată când deschizi VS Code terminal:
+powershell.\kokoro_env\Scripts\Activate.ps1
+
+
+Dacă vrei să testezi doar vocea fără video (ca să nu aștepți render):
+powershellcd src\voice_gen
+python kokoro_narration.py --text "Take a deep breath. You are safe and calm." -o test.wav --preset calm

@@ -12,4 +12,6 @@ assets/output/
 *.mp3
 *.wav
 assets/curated_pool/*
+!assets/curated_pool/.gitkeep
 assets/music/*
+!assets/music/.gitkeep

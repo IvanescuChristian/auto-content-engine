@@ -17,13 +17,9 @@ def get_script(topic, subtopics, minutes, method="Gemini"):
     Focus on these subtopics: {subtopics}. 
     Target duration: {minutes} minutes.
     
-    Format the output as follows:
-    [SCENE 1]
-    IMAGE_PROMPT: (Description of a high-quality historical image or atmosphere for this part)
-    TEXT: (The spoken narration)
-    
-    [SCENE 2]
-    ...
+    Format the output strictly as spoken text paragraphs.
+    Do not include scene markers, image prompts, visual directions, or any other formatting.
+    Write only the exact words that the narrator will speak.
     """
 
     try:

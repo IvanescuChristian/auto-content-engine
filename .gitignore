@@ -11,3 +11,5 @@ assets/output/
 *.mp4
 *.mp3
 *.wav
+assets/curated_pool/*
+assets/music/*

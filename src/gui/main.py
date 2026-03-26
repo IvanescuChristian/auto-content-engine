@@ -4,49 +4,34 @@ from gtts import gTTS
 import os
 import shutil
 from script_gen.generator import get_script
-from video_edit.downloader import download_images_from_pexels
 from video_edit.editor import create_video
+
 def cleanup_old_assets():
-    """Șterge pozele vechi și fișierele temporare pentru a evita amestecarea lor."""
-    images_dir = "assets/images"
-    files_to_delete = ["video_final.mp3", "generated_script.txt"]
-    
-    if os.path.exists(images_dir):
-        for filename in os.listdir(images_dir):
-            file_path = os.path.join(images_dir, filename)
-            try:
-                if os.path.isfile(file_path) or os.path.islink(file_path):
-                    os.unlink(file_path)
-                elif os.path.isdir(file_path):
-                    shutil.rmtree(file_path)
-            except Exception as e:
-                print(f'Failed to delete {file_path}. Reason: {e}')
-    
+    files_to_delete = ["video_final.mp3", "generated_script.txt", "final_video.mp4"]
     for file in files_to_delete:
         if os.path.exists(file):
             os.remove(file)
-    
-    print("Cleanup complete. Starting fresh...")
+    print("Cleanup complete.")
+
 def process_content(text):
     if not text.strip():
         root.after(0, lambda: messagebox.showwarning("Warning", "The script is empty!"))
         return
     try:
         cleanup_old_assets()
+        
         root.after(0, lambda: messagebox.showinfo("Status", "Generating Audio..."))
         tts = gTTS(text=text, lang='en') 
         output_path = "video_final.mp3"
         tts.save(output_path)
         
-        root.after(0, lambda: messagebox.showinfo("Status", "Downloading images..."))
-        download_images_from_pexels(text)
-        
-        root.after(0, lambda: messagebox.showinfo("Status", "Rendering video... This will take a while."))
+        root.after(0, lambda: messagebox.showinfo("Status", "Rendering cinematic video... This will take a while."))
         create_video()
         
         root.after(0, lambda: messagebox.showinfo("Success", "Video generated successfully! Check final_video.mp4"))
     except Exception as e:
-        root.after(0, lambda: messagebox.showerror("Error", f"Processing failed: {e}"))
+        error_details = str(e)
+        root.after(0, lambda: messagebox.showerror("Error", f"Processing failed: {error_details}"))
 
 def update_ui_style(event=None):
     method = combo_method.get()
@@ -90,7 +75,6 @@ def on_generate(event=None):
         except Exception as e:
             messagebox.showerror("Error", f"AI Generation failed: {e}")
 
-
 root = tk.Tk()
 root.title("YouTube Automator")
 root.geometry("450x550")
@@ -98,7 +82,6 @@ root.resizable(False, False)
 
 font_label = ("Arial", 11, "bold")
 font_entry = ("Arial", 11)
-
 
 tk.Label(root, text="Step 1: Choose Source", font=font_label).pack(pady=(25, 5))
 
@@ -121,13 +104,11 @@ tk.Label(root, text="Est. Duration (minutes):", font=font_label).pack(pady=(15, 
 entry_minutes = tk.Entry(root, width=15, font=font_entry)
 entry_minutes.pack()
 
-
 btn_generate = tk.Button(root, text="Paste Script & Generate Audio", font=("Arial", 12, "bold"), 
                          bg="#10b981", fg="white", command=on_generate, height=2, width=30)
 btn_generate.pack(pady=40)
 
 root.bind('<Return>', on_generate)
-
 
 update_ui_style()
 

@@ -227,3 +227,4 @@ tk.Label(root, text="Trends → Gemini → Kokoro TTS → Video",
 root.bind('<Return>', on_generate)
 update_ui_style()
 root.mainloop()
+

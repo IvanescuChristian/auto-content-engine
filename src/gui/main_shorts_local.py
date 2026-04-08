@@ -125,8 +125,10 @@ def create_short_video(clip_paths, audio_path, ass_path, output="final_short.mp4
     else:
         vf = f"scale=1920:1080:force_original_aspect_ratio=increase,crop=1920:1080,ass='{ass_abs}'"
 
+    from imageio_ffmpeg import get_ffmpeg_exe
+    ffmpeg_exe = get_ffmpeg_exe()
     cmd = [
-        "ffmpeg", "-y",
+        ffmpeg_exe, "-y",
         "-i", temp_path,
         "-vf", vf,
         "-c:a", "copy",
@@ -170,13 +172,13 @@ def run_pipeline(story, game_name, voice_preset, is_vertical, highlight_color,
         if sub_style == "Word-by-word":
             generate_karaoke_ass(
                 timings, output_ass=ass_path,
-                font_size=21, highlight_color=highlight_color,
+                font_size=100, highlight_color=highlight_color, #aici ma joc cu marimea fontului pentru subtitles.
                 is_vertical=is_vertical, words_per_group=words_per_group
             )
         else:
             generate_karaoke_simple(
                 timings, output_ass=ass_path,
-                font_size=21, highlight_color=highlight_color,
+                font_size=100, highlight_color=highlight_color,
                 is_vertical=is_vertical
             )
 
@@ -208,7 +210,11 @@ def run_pipeline(story, game_name, voice_preset, is_vertical, highlight_color,
             root.after(0, lambda: status_label.config(text="Failed"))
 
     except Exception as e:
-        root.after(0, lambda: messagebox.showerror("Error", f"Pipeline failed: {e}"))
+        import traceback
+        error_trace = traceback.format_exc()
+        print(f"\n[CRITICAL ERROR in Pipeline]\n{error_trace}\n")
+        
+        root.after(0, lambda: messagebox.showerror("Error", f"Pipeline failed: {e}\nVezi consola pentru detalii!"))
         root.after(0, lambda: status_label.config(text="Error"))
     finally:
         root.after(0, lambda: btn_generate.config(state=tk.NORMAL))

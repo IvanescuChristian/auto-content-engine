@@ -1,0 +1,397 @@
+[Script Info]
+Title: Karaoke Subtitles
+ScriptType: v4.00+
+WrapStyle: 0
+PlayResX: 1080
+PlayResY: 1920
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,21,&H00FFFFFF,&H00FF00FF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,8,0,2,40,40,800,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:00.40,Default,,0,0,0,,{\c&H00FF00FF}WIBTA{\c&H00FFFFFF} If I refused to switch dorms with a girl
+Dialogue: 0,0:00:00.40,0:00:00.56,Default,,0,0,0,,WIBTA {\c&H00FF00FF}If{\c&H00FFFFFF} I refused to switch dorms with a girl
+Dialogue: 0,0:00:00.56,0:00:00.71,Default,,0,0,0,,WIBTA If {\c&H00FF00FF}I{\c&H00FFFFFF} refused to switch dorms with a girl
+Dialogue: 0,0:00:00.71,0:00:01.28,Default,,0,0,0,,WIBTA If I {\c&H00FF00FF}refused{\c&H00FFFFFF} to switch dorms with a girl
+Dialogue: 0,0:00:01.28,0:00:01.44,Default,,0,0,0,,WIBTA If I refused {\c&H00FF00FF}to{\c&H00FFFFFF} switch dorms with a girl
+Dialogue: 0,0:00:01.44,0:00:01.93,Default,,0,0,0,,WIBTA If I refused to {\c&H00FF00FF}switch{\c&H00FFFFFF} dorms with a girl
+Dialogue: 0,0:00:01.93,0:00:02.34,Default,,0,0,0,,WIBTA If I refused to switch {\c&H00FF00FF}dorms{\c&H00FFFFFF} with a girl
+Dialogue: 0,0:00:02.34,0:00:02.66,Default,,0,0,0,,WIBTA If I refused to switch dorms {\c&H00FF00FF}with{\c&H00FFFFFF} a girl
+Dialogue: 0,0:00:02.66,0:00:02.81,Default,,0,0,0,,WIBTA If I refused to switch dorms with {\c&H00FF00FF}a{\c&H00FFFFFF} girl
+Dialogue: 0,0:00:02.81,0:00:03.14,Default,,0,0,0,,WIBTA If I refused to switch dorms with a {\c&H00FF00FF}girl{\c&H00FFFFFF}
+Dialogue: 0,0:00:03.14,0:00:03.38,Default,,0,0,0,,{\c&H00FF00FF}who{\c&H00FFFFFF} was autistic?... So basically, I go to an almost
+Dialogue: 0,0:00:03.38,0:00:03.62,Default,,0,0,0,,who {\c&H00FF00FF}was{\c&H00FFFFFF} autistic?... So basically, I go to an almost
+Dialogue: 0,0:00:03.62,0:00:04.60,Default,,0,0,0,,who was {\c&H00FF00FF}autistic?...{\c&H00FFFFFF} So basically, I go to an almost
+Dialogue: 0,0:00:04.60,0:00:04.76,Default,,0,0,0,,who was autistic?... {\c&H00FF00FF}So{\c&H00FFFFFF} basically, I go to an almost
+Dialogue: 0,0:00:04.76,0:00:05.58,Default,,0,0,0,,who was autistic?... So {\c&H00FF00FF}basically,{\c&H00FFFFFF} I go to an almost
+Dialogue: 0,0:00:05.58,0:00:05.72,Default,,0,0,0,,who was autistic?... So basically, {\c&H00FF00FF}I{\c&H00FFFFFF} go to an almost
+Dialogue: 0,0:00:05.72,0:00:05.89,Default,,0,0,0,,who was autistic?... So basically, I {\c&H00FF00FF}go{\c&H00FFFFFF} to an almost
+Dialogue: 0,0:00:05.89,0:00:06.05,Default,,0,0,0,,who was autistic?... So basically, I go {\c&H00FF00FF}to{\c&H00FFFFFF} an almost
+Dialogue: 0,0:00:06.05,0:00:06.21,Default,,0,0,0,,who was autistic?... So basically, I go to {\c&H00FF00FF}an{\c&H00FFFFFF} almost
+Dialogue: 0,0:00:06.21,0:00:06.70,Default,,0,0,0,,who was autistic?... So basically, I go to an {\c&H00FF00FF}almost{\c&H00FFFFFF}
+Dialogue: 0,0:00:06.70,0:00:07.51,Default,,0,0,0,,{\c&H00FF00FF}Montessori{\c&H00FFFFFF} boarding school, where the students get to choose their
+Dialogue: 0,0:00:07.51,0:00:08.16,Default,,0,0,0,,Montessori {\c&H00FF00FF}boarding{\c&H00FFFFFF} school, where the students get to choose their
+Dialogue: 0,0:00:08.16,0:00:08.73,Default,,0,0,0,,Montessori boarding {\c&H00FF00FF}school,{\c&H00FFFFFF} where the students get to choose their
+Dialogue: 0,0:00:08.73,0:00:09.14,Default,,0,0,0,,Montessori boarding school, {\c&H00FF00FF}where{\c&H00FFFFFF} the students get to choose their
+Dialogue: 0,0:00:09.14,0:00:09.38,Default,,0,0,0,,Montessori boarding school, where {\c&H00FF00FF}the{\c&H00FFFFFF} students get to choose their
+Dialogue: 0,0:00:09.38,0:00:10.03,Default,,0,0,0,,Montessori boarding school, where the {\c&H00FF00FF}students{\c&H00FFFFFF} get to choose their
+Dialogue: 0,0:00:10.03,0:00:10.28,Default,,0,0,0,,Montessori boarding school, where the students {\c&H00FF00FF}get{\c&H00FFFFFF} to choose their
+Dialogue: 0,0:00:10.28,0:00:10.44,Default,,0,0,0,,Montessori boarding school, where the students get {\c&H00FF00FF}to{\c&H00FFFFFF} choose their
+Dialogue: 0,0:00:10.44,0:00:10.93,Default,,0,0,0,,Montessori boarding school, where the students get to {\c&H00FF00FF}choose{\c&H00FFFFFF} their
+Dialogue: 0,0:00:10.93,0:00:11.34,Default,,0,0,0,,Montessori boarding school, where the students get to choose {\c&H00FF00FF}their{\c&H00FFFFFF}
+Dialogue: 0,0:00:11.34,0:00:11.58,Default,,0,0,0,,{\c&H00FF00FF}own{\c&H00FFFFFF} dorms and roommates. I have what most people would
+Dialogue: 0,0:00:11.58,0:00:11.99,Default,,0,0,0,,own {\c&H00FF00FF}dorms{\c&H00FFFFFF} and roommates. I have what most people would
+Dialogue: 0,0:00:11.99,0:00:12.23,Default,,0,0,0,,own dorms {\c&H00FF00FF}and{\c&H00FFFFFF} roommates. I have what most people would
+Dialogue: 0,0:00:12.23,0:00:13.04,Default,,0,0,0,,own dorms and {\c&H00FF00FF}roommates.{\c&H00FFFFFF} I have what most people would
+Dialogue: 0,0:00:13.04,0:00:13.19,Default,,0,0,0,,own dorms and roommates. {\c&H00FF00FF}I{\c&H00FFFFFF} have what most people would
+Dialogue: 0,0:00:13.19,0:00:13.52,Default,,0,0,0,,own dorms and roommates. I {\c&H00FF00FF}have{\c&H00FFFFFF} what most people would
+Dialogue: 0,0:00:13.52,0:00:13.84,Default,,0,0,0,,own dorms and roommates. I have {\c&H00FF00FF}what{\c&H00FFFFFF} most people would
+Dialogue: 0,0:00:13.84,0:00:14.17,Default,,0,0,0,,own dorms and roommates. I have what {\c&H00FF00FF}most{\c&H00FFFFFF} people would
+Dialogue: 0,0:00:14.17,0:00:14.66,Default,,0,0,0,,own dorms and roommates. I have what most {\c&H00FF00FF}people{\c&H00FFFFFF} would
+Dialogue: 0,0:00:14.66,0:00:15.06,Default,,0,0,0,,own dorms and roommates. I have what most people {\c&H00FF00FF}would{\c&H00FFFFFF}
+Dialogue: 0,0:00:15.06,0:00:15.47,Default,,0,0,0,,{\c&H00FF00FF}agree{\c&H00FFFFFF} to be the best dorm.
+Dialogue: 0,0:00:15.47,0:00:15.63,Default,,0,0,0,,agree {\c&H00FF00FF}to{\c&H00FFFFFF} be the best dorm.
+Dialogue: 0,0:00:15.63,0:00:15.79,Default,,0,0,0,,agree to {\c&H00FF00FF}be{\c&H00FFFFFF} the best dorm.
+Dialogue: 0,0:00:15.79,0:00:16.04,Default,,0,0,0,,agree to be {\c&H00FF00FF}the{\c&H00FFFFFF} best dorm.
+Dialogue: 0,0:00:16.04,0:00:16.36,Default,,0,0,0,,agree to be the {\c&H00FF00FF}best{\c&H00FFFFFF} dorm.
+Dialogue: 0,0:00:16.36,0:00:16.77,Default,,0,0,0,,agree to be the best {\c&H00FF00FF}dorm.{\c&H00FFFFFF}
+Dialogue: 0,0:00:17.17,0:00:17.48,Default,,0,0,0,,{\c&H00FF00FF}This{\c&H00FFFFFF} is because the way our dorms are set up,
+Dialogue: 0,0:00:17.48,0:00:17.63,Default,,0,0,0,,This {\c&H00FF00FF}is{\c&H00FFFFFF} because the way our dorms are set up,
+Dialogue: 0,0:00:17.63,0:00:18.17,Default,,0,0,0,,This is {\c&H00FF00FF}because{\c&H00FFFFFF} the way our dorms are set up,
+Dialogue: 0,0:00:18.17,0:00:18.40,Default,,0,0,0,,This is because {\c&H00FF00FF}the{\c&H00FFFFFF} way our dorms are set up,
+Dialogue: 0,0:00:18.40,0:00:18.64,Default,,0,0,0,,This is because the {\c&H00FF00FF}way{\c&H00FFFFFF} our dorms are set up,
+Dialogue: 0,0:00:18.64,0:00:18.87,Default,,0,0,0,,This is because the way {\c&H00FF00FF}our{\c&H00FFFFFF} dorms are set up,
+Dialogue: 0,0:00:18.87,0:00:19.25,Default,,0,0,0,,This is because the way our {\c&H00FF00FF}dorms{\c&H00FFFFFF} are set up,
+Dialogue: 0,0:00:19.25,0:00:19.49,Default,,0,0,0,,This is because the way our dorms {\c&H00FF00FF}are{\c&H00FFFFFF} set up,
+Dialogue: 0,0:00:19.49,0:00:19.72,Default,,0,0,0,,This is because the way our dorms are {\c&H00FF00FF}set{\c&H00FFFFFF} up,
+Dialogue: 0,0:00:19.72,0:00:19.95,Default,,0,0,0,,This is because the way our dorms are set {\c&H00FF00FF}up,{\c&H00FFFFFF}
+Dialogue: 0,0:00:19.95,0:00:20.33,Default,,0,0,0,,{\c&H00FF00FF}every{\c&H00FFFFFF} dorm that is made for two people has a
+Dialogue: 0,0:00:20.33,0:00:20.64,Default,,0,0,0,,every {\c&H00FF00FF}dorm{\c&H00FFFFFF} that is made for two people has a
+Dialogue: 0,0:00:20.64,0:00:20.95,Default,,0,0,0,,every dorm {\c&H00FF00FF}that{\c&H00FFFFFF} is made for two people has a
+Dialogue: 0,0:00:20.95,0:00:21.11,Default,,0,0,0,,every dorm that {\c&H00FF00FF}is{\c&H00FFFFFF} made for two people has a
+Dialogue: 0,0:00:21.11,0:00:21.42,Default,,0,0,0,,every dorm that is {\c&H00FF00FF}made{\c&H00FFFFFF} for two people has a
+Dialogue: 0,0:00:21.42,0:00:21.65,Default,,0,0,0,,every dorm that is made {\c&H00FF00FF}for{\c&H00FFFFFF} two people has a
+Dialogue: 0,0:00:21.65,0:00:21.88,Default,,0,0,0,,every dorm that is made for {\c&H00FF00FF}two{\c&H00FFFFFF} people has a
+Dialogue: 0,0:00:21.88,0:00:22.34,Default,,0,0,0,,every dorm that is made for two {\c&H00FF00FF}people{\c&H00FFFFFF} has a
+Dialogue: 0,0:00:22.34,0:00:22.57,Default,,0,0,0,,every dorm that is made for two people {\c&H00FF00FF}has{\c&H00FFFFFF} a
+Dialogue: 0,0:00:22.57,0:00:22.72,Default,,0,0,0,,every dorm that is made for two people has {\c&H00FF00FF}a{\c&H00FFFFFF}
+Dialogue: 0,0:00:22.72,0:00:23.34,Default,,0,0,0,,{\c&H00FF00FF}bathroom{\c&H00FFFFFF} in it and is bigger than the singles, and
+Dialogue: 0,0:00:23.34,0:00:23.49,Default,,0,0,0,,bathroom {\c&H00FF00FF}in{\c&H00FFFFFF} it and is bigger than the singles, and
+Dialogue: 0,0:00:23.49,0:00:23.65,Default,,0,0,0,,bathroom in {\c&H00FF00FF}it{\c&H00FFFFFF} and is bigger than the singles, and
+Dialogue: 0,0:00:23.65,0:00:23.88,Default,,0,0,0,,bathroom in it {\c&H00FF00FF}and{\c&H00FFFFFF} is bigger than the singles, and
+Dialogue: 0,0:00:23.88,0:00:24.03,Default,,0,0,0,,bathroom in it and {\c&H00FF00FF}is{\c&H00FFFFFF} bigger than the singles, and
+Dialogue: 0,0:00:24.03,0:00:24.50,Default,,0,0,0,,bathroom in it and is {\c&H00FF00FF}bigger{\c&H00FFFFFF} than the singles, and
+Dialogue: 0,0:00:24.50,0:00:24.81,Default,,0,0,0,,bathroom in it and is bigger {\c&H00FF00FF}than{\c&H00FFFFFF} the singles, and
+Dialogue: 0,0:00:24.81,0:00:25.04,Default,,0,0,0,,bathroom in it and is bigger than {\c&H00FF00FF}the{\c&H00FFFFFF} singles, and
+Dialogue: 0,0:00:25.04,0:00:25.65,Default,,0,0,0,,bathroom in it and is bigger than the {\c&H00FF00FF}singles,{\c&H00FFFFFF} and
+Dialogue: 0,0:00:25.65,0:00:25.89,Default,,0,0,0,,bathroom in it and is bigger than the singles, {\c&H00FF00FF}and{\c&H00FFFFFF}
+Dialogue: 0,0:00:25.89,0:00:26.35,Default,,0,0,0,,{\c&H00FF00FF}single{\c&H00FFFFFF} dorms don't have bathrooms and have to share a
+Dialogue: 0,0:00:26.35,0:00:26.73,Default,,0,0,0,,single {\c&H00FF00FF}dorms{\c&H00FFFFFF} don't have bathrooms and have to share a
+Dialogue: 0,0:00:26.73,0:00:27.12,Default,,0,0,0,,single dorms {\c&H00FF00FF}don't{\c&H00FFFFFF} have bathrooms and have to share a
+Dialogue: 0,0:00:27.12,0:00:27.43,Default,,0,0,0,,single dorms don't {\c&H00FF00FF}have{\c&H00FFFFFF} bathrooms and have to share a
+Dialogue: 0,0:00:27.43,0:00:28.12,Default,,0,0,0,,single dorms don't have {\c&H00FF00FF}bathrooms{\c&H00FFFFFF} and have to share a
+Dialogue: 0,0:00:28.12,0:00:28.36,Default,,0,0,0,,single dorms don't have bathrooms {\c&H00FF00FF}and{\c&H00FFFFFF} have to share a
+Dialogue: 0,0:00:28.36,0:00:28.66,Default,,0,0,0,,single dorms don't have bathrooms and {\c&H00FF00FF}have{\c&H00FFFFFF} to share a
+Dialogue: 0,0:00:28.66,0:00:28.82,Default,,0,0,0,,single dorms don't have bathrooms and have {\c&H00FF00FF}to{\c&H00FFFFFF} share a
+Dialogue: 0,0:00:28.82,0:00:29.20,Default,,0,0,0,,single dorms don't have bathrooms and have to {\c&H00FF00FF}share{\c&H00FFFFFF} a
+Dialogue: 0,0:00:29.20,0:00:29.35,Default,,0,0,0,,single dorms don't have bathrooms and have to share {\c&H00FF00FF}a{\c&H00FFFFFF}
+Dialogue: 0,0:00:29.35,0:00:29.97,Default,,0,0,0,,{\c&H00FF00FF}communal{\c&H00FFFFFF} bathroom with three other single dorms.
+Dialogue: 0,0:00:29.97,0:00:30.59,Default,,0,0,0,,communal {\c&H00FF00FF}bathroom{\c&H00FFFFFF} with three other single dorms.
+Dialogue: 0,0:00:30.59,0:00:30.90,Default,,0,0,0,,communal bathroom {\c&H00FF00FF}with{\c&H00FFFFFF} three other single dorms.
+Dialogue: 0,0:00:30.90,0:00:31.28,Default,,0,0,0,,communal bathroom with {\c&H00FF00FF}three{\c&H00FFFFFF} other single dorms.
+Dialogue: 0,0:00:31.28,0:00:31.67,Default,,0,0,0,,communal bathroom with three {\c&H00FF00FF}other{\c&H00FFFFFF} single dorms.
+Dialogue: 0,0:00:31.67,0:00:32.13,Default,,0,0,0,,communal bathroom with three other {\c&H00FF00FF}single{\c&H00FFFFFF} dorms.
+Dialogue: 0,0:00:32.13,0:00:32.60,Default,,0,0,0,,communal bathroom with three other single {\c&H00FF00FF}dorms.{\c&H00FFFFFF}
+Dialogue: 0,0:00:32.99,0:00:33.86,Default,,0,0,0,,{\c&H00FF00FF}Apperentaly{\c&H00FFFFFF} around 3 years before I got to my dorm,
+Dialogue: 0,0:00:33.86,0:00:34.34,Default,,0,0,0,,Apperentaly {\c&H00FF00FF}around{\c&H00FFFFFF} 3 years before I got to my dorm,
+Dialogue: 0,0:00:34.34,0:00:34.48,Default,,0,0,0,,Apperentaly around {\c&H00FF00FF}3{\c&H00FFFFFF} years before I got to my dorm,
+Dialogue: 0,0:00:34.48,0:00:34.88,Default,,0,0,0,,Apperentaly around 3 {\c&H00FF00FF}years{\c&H00FFFFFF} before I got to my dorm,
+Dialogue: 0,0:00:34.88,0:00:35.35,Default,,0,0,0,,Apperentaly around 3 years {\c&H00FF00FF}before{\c&H00FFFFFF} I got to my dorm,
+Dialogue: 0,0:00:35.35,0:00:35.50,Default,,0,0,0,,Apperentaly around 3 years before {\c&H00FF00FF}I{\c&H00FFFFFF} got to my dorm,
+Dialogue: 0,0:00:35.50,0:00:35.74,Default,,0,0,0,,Apperentaly around 3 years before I {\c&H00FF00FF}got{\c&H00FFFFFF} to my dorm,
+Dialogue: 0,0:00:35.74,0:00:35.89,Default,,0,0,0,,Apperentaly around 3 years before I got {\c&H00FF00FF}to{\c&H00FFFFFF} my dorm,
+Dialogue: 0,0:00:35.89,0:00:36.05,Default,,0,0,0,,Apperentaly around 3 years before I got to {\c&H00FF00FF}my{\c&H00FFFFFF} dorm,
+Dialogue: 0,0:00:36.05,0:00:36.45,Default,,0,0,0,,Apperentaly around 3 years before I got to my {\c&H00FF00FF}dorm,{\c&H00FFFFFF}
+Dialogue: 0,0:00:36.45,0:00:37.08,Default,,0,0,0,,{\c&H00FF00FF}multiple{\c&H00FFFFFF} people complained that my dorm was too small for
+Dialogue: 0,0:00:37.08,0:00:37.55,Default,,0,0,0,,multiple {\c&H00FF00FF}people{\c&H00FFFFFF} complained that my dorm was too small for
+Dialogue: 0,0:00:37.55,0:00:38.34,Default,,0,0,0,,multiple people {\c&H00FF00FF}complained{\c&H00FFFFFF} that my dorm was too small for
+Dialogue: 0,0:00:38.34,0:00:38.66,Default,,0,0,0,,multiple people complained {\c&H00FF00FF}that{\c&H00FFFFFF} my dorm was too small for
+Dialogue: 0,0:00:38.66,0:00:38.82,Default,,0,0,0,,multiple people complained that {\c&H00FF00FF}my{\c&H00FFFFFF} dorm was too small for
+Dialogue: 0,0:00:38.82,0:00:39.13,Default,,0,0,0,,multiple people complained that my {\c&H00FF00FF}dorm{\c&H00FFFFFF} was too small for
+Dialogue: 0,0:00:39.13,0:00:39.37,Default,,0,0,0,,multiple people complained that my dorm {\c&H00FF00FF}was{\c&H00FFFFFF} too small for
+Dialogue: 0,0:00:39.37,0:00:39.60,Default,,0,0,0,,multiple people complained that my dorm was {\c&H00FF00FF}too{\c&H00FFFFFF} small for
+Dialogue: 0,0:00:39.60,0:00:40.00,Default,,0,0,0,,multiple people complained that my dorm was too {\c&H00FF00FF}small{\c&H00FFFFFF} for
+Dialogue: 0,0:00:40.00,0:00:40.24,Default,,0,0,0,,multiple people complained that my dorm was too small {\c&H00FF00FF}for{\c&H00FFFFFF}
+Dialogue: 0,0:00:40.24,0:00:40.38,Default,,0,0,0,,{\c&H00FF00FF}2{\c&H00FFFFFF} people, so the school just made it a single.
+Dialogue: 0,0:00:40.38,0:00:40.94,Default,,0,0,0,,2 {\c&H00FF00FF}people,{\c&H00FFFFFF} so the school just made it a single.
+Dialogue: 0,0:00:40.94,0:00:41.09,Default,,0,0,0,,2 people, {\c&H00FF00FF}so{\c&H00FFFFFF} the school just made it a single.
+Dialogue: 0,0:00:41.09,0:00:41.33,Default,,0,0,0,,2 people, so {\c&H00FF00FF}the{\c&H00FFFFFF} school just made it a single.
+Dialogue: 0,0:00:41.33,0:00:41.80,Default,,0,0,0,,2 people, so the {\c&H00FF00FF}school{\c&H00FFFFFF} just made it a single.
+Dialogue: 0,0:00:41.80,0:00:42.12,Default,,0,0,0,,2 people, so the school {\c&H00FF00FF}just{\c&H00FFFFFF} made it a single.
+Dialogue: 0,0:00:42.12,0:00:42.44,Default,,0,0,0,,2 people, so the school just {\c&H00FF00FF}made{\c&H00FFFFFF} it a single.
+Dialogue: 0,0:00:42.44,0:00:42.59,Default,,0,0,0,,2 people, so the school just made {\c&H00FF00FF}it{\c&H00FFFFFF} a single.
+Dialogue: 0,0:00:42.59,0:00:42.74,Default,,0,0,0,,2 people, so the school just made it {\c&H00FF00FF}a{\c&H00FFFFFF} single.
+Dialogue: 0,0:00:42.74,0:00:43.29,Default,,0,0,0,,2 people, so the school just made it a {\c&H00FF00FF}single.{\c&H00FFFFFF}
+Dialogue: 0,0:00:43.29,0:00:43.45,Default,,0,0,0,,{\c&H00FF00FF}It{\c&H00FFFFFF} was too small because it's next to the laundry
+Dialogue: 0,0:00:43.45,0:00:43.69,Default,,0,0,0,,It {\c&H00FF00FF}was{\c&H00FFFFFF} too small because it's next to the laundry
+Dialogue: 0,0:00:43.69,0:00:43.92,Default,,0,0,0,,It was {\c&H00FF00FF}too{\c&H00FFFFFF} small because it's next to the laundry
+Dialogue: 0,0:00:43.92,0:00:44.32,Default,,0,0,0,,It was too {\c&H00FF00FF}small{\c&H00FFFFFF} because it's next to the laundry
+Dialogue: 0,0:00:44.32,0:00:44.87,Default,,0,0,0,,It was too small {\c&H00FF00FF}because{\c&H00FFFFFF} it's next to the laundry
+Dialogue: 0,0:00:44.87,0:00:45.19,Default,,0,0,0,,It was too small because {\c&H00FF00FF}it's{\c&H00FFFFFF} next to the laundry
+Dialogue: 0,0:00:45.19,0:00:45.50,Default,,0,0,0,,It was too small because it's {\c&H00FF00FF}next{\c&H00FFFFFF} to the laundry
+Dialogue: 0,0:00:45.50,0:00:45.66,Default,,0,0,0,,It was too small because it's next {\c&H00FF00FF}to{\c&H00FFFFFF} the laundry
+Dialogue: 0,0:00:45.66,0:00:45.90,Default,,0,0,0,,It was too small because it's next to {\c&H00FF00FF}the{\c&H00FFFFFF} laundry
+Dialogue: 0,0:00:45.90,0:00:46.45,Default,,0,0,0,,It was too small because it's next to the {\c&H00FF00FF}laundry{\c&H00FFFFFF}
+Dialogue: 0,0:00:46.45,0:00:46.85,Default,,0,0,0,,{\c&H00FF00FF}room.{\c&H00FFFFFF} I chose this room because I have a family
+Dialogue: 0,0:00:46.85,0:00:46.99,Default,,0,0,0,,room. {\c&H00FF00FF}I{\c&H00FFFFFF} chose this room because I have a family
+Dialogue: 0,0:00:46.99,0:00:47.39,Default,,0,0,0,,room. I {\c&H00FF00FF}chose{\c&H00FFFFFF} this room because I have a family
+Dialogue: 0,0:00:47.39,0:00:47.70,Default,,0,0,0,,room. I chose {\c&H00FF00FF}this{\c&H00FFFFFF} room because I have a family
+Dialogue: 0,0:00:47.70,0:00:48.02,Default,,0,0,0,,room. I chose this {\c&H00FF00FF}room{\c&H00FFFFFF} because I have a family
+Dialogue: 0,0:00:48.02,0:00:48.57,Default,,0,0,0,,room. I chose this room {\c&H00FF00FF}because{\c&H00FFFFFF} I have a family
+Dialogue: 0,0:00:48.57,0:00:48.72,Default,,0,0,0,,room. I chose this room because {\c&H00FF00FF}I{\c&H00FFFFFF} have a family
+Dialogue: 0,0:00:48.72,0:00:49.03,Default,,0,0,0,,room. I chose this room because I {\c&H00FF00FF}have{\c&H00FFFFFF} a family
+Dialogue: 0,0:00:49.03,0:00:49.18,Default,,0,0,0,,room. I chose this room because I have {\c&H00FF00FF}a{\c&H00FFFFFF} family
+Dialogue: 0,0:00:49.18,0:00:49.65,Default,,0,0,0,,room. I chose this room because I have a {\c&H00FF00FF}family{\c&H00FFFFFF}
+Dialogue: 0,0:00:49.65,0:00:50.13,Default,,0,0,0,,{\c&H00FF00FF}friend{\c&H00FFFFFF} who told me about it.
+Dialogue: 0,0:00:50.13,0:00:50.36,Default,,0,0,0,,friend {\c&H00FF00FF}who{\c&H00FFFFFF} told me about it.
+Dialogue: 0,0:00:50.36,0:00:50.68,Default,,0,0,0,,friend who {\c&H00FF00FF}told{\c&H00FFFFFF} me about it.
+Dialogue: 0,0:00:50.68,0:00:50.84,Default,,0,0,0,,friend who told {\c&H00FF00FF}me{\c&H00FFFFFF} about it.
+Dialogue: 0,0:00:50.84,0:00:51.23,Default,,0,0,0,,friend who told me {\c&H00FF00FF}about{\c&H00FFFFFF} it.
+Dialogue: 0,0:00:51.23,0:00:51.47,Default,,0,0,0,,friend who told me about {\c&H00FF00FF}it.{\c&H00FFFFFF}
+Dialogue: 0,0:00:51.87,0:00:52.10,Default,,0,0,0,,{\c&H00FF00FF}And{\c&H00FFFFFF} because of the way the boarding is set up,
+Dialogue: 0,0:00:52.10,0:00:52.63,Default,,0,0,0,,And {\c&H00FF00FF}because{\c&H00FFFFFF} of the way the boarding is set up,
+Dialogue: 0,0:00:52.63,0:00:52.79,Default,,0,0,0,,And because {\c&H00FF00FF}of{\c&H00FFFFFF} the way the boarding is set up,
+Dialogue: 0,0:00:52.79,0:00:53.01,Default,,0,0,0,,And because of {\c&H00FF00FF}the{\c&H00FFFFFF} way the boarding is set up,
+Dialogue: 0,0:00:53.01,0:00:53.24,Default,,0,0,0,,And because of the {\c&H00FF00FF}way{\c&H00FFFFFF} the boarding is set up,
+Dialogue: 0,0:00:53.24,0:00:53.47,Default,,0,0,0,,And because of the way {\c&H00FF00FF}the{\c&H00FFFFFF} boarding is set up,
+Dialogue: 0,0:00:53.47,0:00:54.08,Default,,0,0,0,,And because of the way the {\c&H00FF00FF}boarding{\c&H00FFFFFF} is set up,
+Dialogue: 0,0:00:54.08,0:00:54.23,Default,,0,0,0,,And because of the way the boarding {\c&H00FF00FF}is{\c&H00FFFFFF} set up,
+Dialogue: 0,0:00:54.23,0:00:54.46,Default,,0,0,0,,And because of the way the boarding is {\c&H00FF00FF}set{\c&H00FFFFFF} up,
+Dialogue: 0,0:00:54.46,0:00:54.69,Default,,0,0,0,,And because of the way the boarding is set {\c&H00FF00FF}up,{\c&H00FFFFFF}
+Dialogue: 0,0:00:54.69,0:00:54.92,Default,,0,0,0,,{\c&H00FF00FF}I'm{\c&H00FFFFFF} going to the same room, just a floor up,
+Dialogue: 0,0:00:54.92,0:00:55.30,Default,,0,0,0,,I'm {\c&H00FF00FF}going{\c&H00FFFFFF} to the same room, just a floor up,
+Dialogue: 0,0:00:55.30,0:00:55.45,Default,,0,0,0,,I'm going {\c&H00FF00FF}to{\c&H00FFFFFF} the same room, just a floor up,
+Dialogue: 0,0:00:55.45,0:00:55.68,Default,,0,0,0,,I'm going to {\c&H00FF00FF}the{\c&H00FFFFFF} same room, just a floor up,
+Dialogue: 0,0:00:55.68,0:00:55.99,Default,,0,0,0,,I'm going to the {\c&H00FF00FF}same{\c&H00FFFFFF} room, just a floor up,
+Dialogue: 0,0:00:55.99,0:00:56.37,Default,,0,0,0,,I'm going to the same {\c&H00FF00FF}room,{\c&H00FFFFFF} just a floor up,
+Dialogue: 0,0:00:56.37,0:00:56.67,Default,,0,0,0,,I'm going to the same room, {\c&H00FF00FF}just{\c&H00FFFFFF} a floor up,
+Dialogue: 0,0:00:56.67,0:00:56.82,Default,,0,0,0,,I'm going to the same room, just {\c&H00FF00FF}a{\c&H00FFFFFF} floor up,
+Dialogue: 0,0:00:56.82,0:00:57.20,Default,,0,0,0,,I'm going to the same room, just a {\c&H00FF00FF}floor{\c&H00FFFFFF} up,
+Dialogue: 0,0:00:57.20,0:00:57.43,Default,,0,0,0,,I'm going to the same room, just a floor {\c&H00FF00FF}up,{\c&H00FFFFFF}
+Dialogue: 0,0:00:57.43,0:00:57.81,Default,,0,0,0,,{\c&H00FF00FF}every{\c&H00FFFFFF} year. So, where the problem starts is that a
+Dialogue: 0,0:00:57.81,0:00:58.20,Default,,0,0,0,,every {\c&H00FF00FF}year.{\c&H00FFFFFF} So, where the problem starts is that a
+Dialogue: 0,0:00:58.20,0:00:58.43,Default,,0,0,0,,every year. {\c&H00FF00FF}So,{\c&H00FFFFFF} where the problem starts is that a
+Dialogue: 0,0:00:58.43,0:00:58.81,Default,,0,0,0,,every year. So, {\c&H00FF00FF}where{\c&H00FFFFFF} the problem starts is that a
+Dialogue: 0,0:00:58.81,0:00:59.04,Default,,0,0,0,,every year. So, where {\c&H00FF00FF}the{\c&H00FFFFFF} problem starts is that a
+Dialogue: 0,0:00:59.04,0:00:59.57,Default,,0,0,0,,every year. So, where the {\c&H00FF00FF}problem{\c&H00FFFFFF} starts is that a
+Dialogue: 0,0:00:59.57,0:01:00.03,Default,,0,0,0,,every year. So, where the problem {\c&H00FF00FF}starts{\c&H00FFFFFF} is that a
+Dialogue: 0,0:01:00.03,0:01:00.18,Default,,0,0,0,,every year. So, where the problem starts {\c&H00FF00FF}is{\c&H00FFFFFF} that a
+Dialogue: 0,0:01:00.18,0:01:00.48,Default,,0,0,0,,every year. So, where the problem starts is {\c&H00FF00FF}that{\c&H00FFFFFF} a
+Dialogue: 0,0:01:00.48,0:01:00.63,Default,,0,0,0,,every year. So, where the problem starts is that {\c&H00FF00FF}a{\c&H00FFFFFF}
+Dialogue: 0,0:01:00.63,0:01:00.94,Default,,0,0,0,,{\c&H00FF00FF}girl{\c&H00FFFFFF} transferred to our school this year, and is autistic.
+Dialogue: 0,0:01:00.94,0:01:01.78,Default,,0,0,0,,girl {\c&H00FF00FF}transferred{\c&H00FFFFFF} to our school this year, and is autistic.
+Dialogue: 0,0:01:01.78,0:01:01.93,Default,,0,0,0,,girl transferred {\c&H00FF00FF}to{\c&H00FFFFFF} our school this year, and is autistic.
+Dialogue: 0,0:01:01.93,0:01:02.16,Default,,0,0,0,,girl transferred to {\c&H00FF00FF}our{\c&H00FFFFFF} school this year, and is autistic.
+Dialogue: 0,0:01:02.16,0:01:02.62,Default,,0,0,0,,girl transferred to our {\c&H00FF00FF}school{\c&H00FFFFFF} this year, and is autistic.
+Dialogue: 0,0:01:02.62,0:01:02.92,Default,,0,0,0,,girl transferred to our school {\c&H00FF00FF}this{\c&H00FFFFFF} year, and is autistic.
+Dialogue: 0,0:01:02.92,0:01:03.30,Default,,0,0,0,,girl transferred to our school this {\c&H00FF00FF}year,{\c&H00FFFFFF} and is autistic.
+Dialogue: 0,0:01:03.30,0:01:03.53,Default,,0,0,0,,girl transferred to our school this year, {\c&H00FF00FF}and{\c&H00FFFFFF} is autistic.
+Dialogue: 0,0:01:03.53,0:01:03.68,Default,,0,0,0,,girl transferred to our school this year, and {\c&H00FF00FF}is{\c&H00FFFFFF} autistic.
+Dialogue: 0,0:01:03.68,0:01:04.37,Default,,0,0,0,,girl transferred to our school this year, and is {\c&H00FF00FF}autistic.{\c&H00FFFFFF}
+Dialogue: 0,0:01:04.37,0:01:04.60,Default,,0,0,0,,{\c&H00FF00FF}The{\c&H00FFFFFF} school has rooms for people who have disabilities, however,
+Dialogue: 0,0:01:04.60,0:01:05.06,Default,,0,0,0,,The {\c&H00FF00FF}school{\c&H00FFFFFF} has rooms for people who have disabilities, however,
+Dialogue: 0,0:01:05.06,0:01:05.29,Default,,0,0,0,,The school {\c&H00FF00FF}has{\c&H00FFFFFF} rooms for people who have disabilities, however,
+Dialogue: 0,0:01:05.29,0:01:05.67,Default,,0,0,0,,The school has {\c&H00FF00FF}rooms{\c&H00FFFFFF} for people who have disabilities, however,
+Dialogue: 0,0:01:05.67,0:01:05.90,Default,,0,0,0,,The school has rooms {\c&H00FF00FF}for{\c&H00FFFFFF} people who have disabilities, however,
+Dialogue: 0,0:01:05.90,0:01:06.35,Default,,0,0,0,,The school has rooms for {\c&H00FF00FF}people{\c&H00FFFFFF} who have disabilities, however,
+Dialogue: 0,0:01:06.35,0:01:06.58,Default,,0,0,0,,The school has rooms for people {\c&H00FF00FF}who{\c&H00FFFFFF} have disabilities, however,
+Dialogue: 0,0:01:06.58,0:01:06.89,Default,,0,0,0,,The school has rooms for people who {\c&H00FF00FF}have{\c&H00FFFFFF} disabilities, however,
+Dialogue: 0,0:01:06.89,0:01:07.88,Default,,0,0,0,,The school has rooms for people who have {\c&H00FF00FF}disabilities,{\c&H00FFFFFF} however,
+Dialogue: 0,0:01:07.88,0:01:08.49,Default,,0,0,0,,The school has rooms for people who have disabilities, {\c&H00FF00FF}however,{\c&H00FFFFFF}
+Dialogue: 0,0:01:08.49,0:01:08.79,Default,,0,0,0,,{\c&H00FF00FF}I've{\c&H00FFFFFF} never been in one of them.
+Dialogue: 0,0:01:08.79,0:01:09.17,Default,,0,0,0,,I've {\c&H00FF00FF}never{\c&H00FFFFFF} been in one of them.
+Dialogue: 0,0:01:09.17,0:01:09.48,Default,,0,0,0,,I've never {\c&H00FF00FF}been{\c&H00FFFFFF} in one of them.
+Dialogue: 0,0:01:09.48,0:01:09.63,Default,,0,0,0,,I've never been {\c&H00FF00FF}in{\c&H00FFFFFF} one of them.
+Dialogue: 0,0:01:09.63,0:01:09.86,Default,,0,0,0,,I've never been in {\c&H00FF00FF}one{\c&H00FFFFFF} of them.
+Dialogue: 0,0:01:09.86,0:01:10.01,Default,,0,0,0,,I've never been in one {\c&H00FF00FF}of{\c&H00FFFFFF} them.
+Dialogue: 0,0:01:10.01,0:01:10.40,Default,,0,0,0,,I've never been in one of {\c&H00FF00FF}them.{\c&H00FFFFFF}
+Dialogue: 0,0:01:10.79,0:01:11.28,Default,,0,0,0,,{\c&H00FF00FF}Before{\c&H00FFFFFF} spring break, she knocked on my door and asked
+Dialogue: 0,0:01:11.28,0:01:11.76,Default,,0,0,0,,Before {\c&H00FF00FF}spring{\c&H00FFFFFF} break, she knocked on my door and asked
+Dialogue: 0,0:01:11.76,0:01:12.25,Default,,0,0,0,,Before spring {\c&H00FF00FF}break,{\c&H00FFFFFF} she knocked on my door and asked
+Dialogue: 0,0:01:12.25,0:01:12.49,Default,,0,0,0,,Before spring break, {\c&H00FF00FF}she{\c&H00FFFFFF} knocked on my door and asked
+Dialogue: 0,0:01:12.49,0:01:13.05,Default,,0,0,0,,Before spring break, she {\c&H00FF00FF}knocked{\c&H00FFFFFF} on my door and asked
+Dialogue: 0,0:01:13.05,0:01:13.21,Default,,0,0,0,,Before spring break, she knocked {\c&H00FF00FF}on{\c&H00FFFFFF} my door and asked
+Dialogue: 0,0:01:13.21,0:01:13.38,Default,,0,0,0,,Before spring break, she knocked on {\c&H00FF00FF}my{\c&H00FFFFFF} door and asked
+Dialogue: 0,0:01:13.38,0:01:13.70,Default,,0,0,0,,Before spring break, she knocked on my {\c&H00FF00FF}door{\c&H00FFFFFF} and asked
+Dialogue: 0,0:01:13.70,0:01:13.94,Default,,0,0,0,,Before spring break, she knocked on my door {\c&H00FF00FF}and{\c&H00FFFFFF} asked
+Dialogue: 0,0:01:13.94,0:01:14.34,Default,,0,0,0,,Before spring break, she knocked on my door and {\c&H00FF00FF}asked{\c&H00FFFFFF}
+Dialogue: 0,0:01:14.34,0:01:14.50,Default,,0,0,0,,{\c&H00FF00FF}if{\c&H00FFFFFF} we could talk. She basically asked if we could
+Dialogue: 0,0:01:14.50,0:01:14.67,Default,,0,0,0,,if {\c&H00FF00FF}we{\c&H00FFFFFF} could talk. She basically asked if we could
+Dialogue: 0,0:01:14.67,0:01:15.07,Default,,0,0,0,,if we {\c&H00FF00FF}could{\c&H00FFFFFF} talk. She basically asked if we could
+Dialogue: 0,0:01:15.07,0:01:15.47,Default,,0,0,0,,if we could {\c&H00FF00FF}talk.{\c&H00FFFFFF} She basically asked if we could
+Dialogue: 0,0:01:15.47,0:01:15.71,Default,,0,0,0,,if we could talk. {\c&H00FF00FF}She{\c&H00FFFFFF} basically asked if we could
+Dialogue: 0,0:01:15.71,0:01:16.44,Default,,0,0,0,,if we could talk. She {\c&H00FF00FF}basically{\c&H00FFFFFF} asked if we could
+Dialogue: 0,0:01:16.44,0:01:16.84,Default,,0,0,0,,if we could talk. She basically {\c&H00FF00FF}asked{\c&H00FFFFFF} if we could
+Dialogue: 0,0:01:16.84,0:01:17.00,Default,,0,0,0,,if we could talk. She basically asked {\c&H00FF00FF}if{\c&H00FFFFFF} we could
+Dialogue: 0,0:01:17.00,0:01:17.17,Default,,0,0,0,,if we could talk. She basically asked if {\c&H00FF00FF}we{\c&H00FFFFFF} could
+Dialogue: 0,0:01:17.17,0:01:17.57,Default,,0,0,0,,if we could talk. She basically asked if we {\c&H00FF00FF}could{\c&H00FFFFFF}
+Dialogue: 0,0:01:17.57,0:01:18.05,Default,,0,0,0,,{\c&H00FF00FF}switch{\c&H00FFFFFF} dorms (but not really, because I don't qualify for
+Dialogue: 0,0:01:18.05,0:01:18.46,Default,,0,0,0,,switch {\c&H00FF00FF}dorms{\c&H00FFFFFF} (but not really, because I don't qualify for
+Dialogue: 0,0:01:18.46,0:01:18.78,Default,,0,0,0,,switch dorms {\c&H00FF00FF}(but{\c&H00FFFFFF} not really, because I don't qualify for
+Dialogue: 0,0:01:18.78,0:01:19.02,Default,,0,0,0,,switch dorms (but {\c&H00FF00FF}not{\c&H00FFFFFF} really, because I don't qualify for
+Dialogue: 0,0:01:19.02,0:01:19.58,Default,,0,0,0,,switch dorms (but not {\c&H00FF00FF}really,{\c&H00FFFFFF} because I don't qualify for
+Dialogue: 0,0:01:19.58,0:01:20.15,Default,,0,0,0,,switch dorms (but not really, {\c&H00FF00FF}because{\c&H00FFFFFF} I don't qualify for
+Dialogue: 0,0:01:20.15,0:01:20.30,Default,,0,0,0,,switch dorms (but not really, because {\c&H00FF00FF}I{\c&H00FFFFFF} don't qualify for
+Dialogue: 0,0:01:20.30,0:01:20.70,Default,,0,0,0,,switch dorms (but not really, because I {\c&H00FF00FF}don't{\c&H00FFFFFF} qualify for
+Dialogue: 0,0:01:20.70,0:01:21.27,Default,,0,0,0,,switch dorms (but not really, because I don't {\c&H00FF00FF}qualify{\c&H00FFFFFF} for
+Dialogue: 0,0:01:21.27,0:01:21.51,Default,,0,0,0,,switch dorms (but not really, because I don't qualify {\c&H00FF00FF}for{\c&H00FFFFFF}
+Dialogue: 0,0:01:21.51,0:01:21.66,Default,,0,0,0,,{\c&H00FF00FF}a{\c&H00FFFFFF} disability dorm) because my dorm would be better adjusted
+Dialogue: 0,0:01:21.66,0:01:22.46,Default,,0,0,0,,a {\c&H00FF00FF}disability{\c&H00FFFFFF} dorm) because my dorm would be better adjusted
+Dialogue: 0,0:01:22.46,0:01:22.87,Default,,0,0,0,,a disability {\c&H00FF00FF}dorm){\c&H00FFFFFF} because my dorm would be better adjusted
+Dialogue: 0,0:01:22.87,0:01:23.43,Default,,0,0,0,,a disability dorm) {\c&H00FF00FF}because{\c&H00FFFFFF} my dorm would be better adjusted
+Dialogue: 0,0:01:23.43,0:01:23.59,Default,,0,0,0,,a disability dorm) because {\c&H00FF00FF}my{\c&H00FFFFFF} dorm would be better adjusted
+Dialogue: 0,0:01:23.59,0:01:23.91,Default,,0,0,0,,a disability dorm) because my {\c&H00FF00FF}dorm{\c&H00FFFFFF} would be better adjusted
+Dialogue: 0,0:01:23.91,0:01:24.32,Default,,0,0,0,,a disability dorm) because my dorm {\c&H00FF00FF}would{\c&H00FFFFFF} be better adjusted
+Dialogue: 0,0:01:24.32,0:01:24.48,Default,,0,0,0,,a disability dorm) because my dorm would {\c&H00FF00FF}be{\c&H00FFFFFF} better adjusted
+Dialogue: 0,0:01:24.48,0:01:24.96,Default,,0,0,0,,a disability dorm) because my dorm would be {\c&H00FF00FF}better{\c&H00FFFFFF} adjusted
+Dialogue: 0,0:01:24.96,0:01:25.61,Default,,0,0,0,,a disability dorm) because my dorm would be better {\c&H00FF00FF}adjusted{\c&H00FFFFFF}
+Dialogue: 0,0:01:25.61,0:01:25.85,Default,,0,0,0,,{\c&H00FF00FF}for{\c&H00FFFFFF} her, becasue its close to the laundry room, has
+Dialogue: 0,0:01:25.85,0:01:26.17,Default,,0,0,0,,for {\c&H00FF00FF}her,{\c&H00FFFFFF} becasue its close to the laundry room, has
+Dialogue: 0,0:01:26.17,0:01:26.74,Default,,0,0,0,,for her, {\c&H00FF00FF}becasue{\c&H00FFFFFF} its close to the laundry room, has
+Dialogue: 0,0:01:26.74,0:01:26.98,Default,,0,0,0,,for her, becasue {\c&H00FF00FF}its{\c&H00FFFFFF} close to the laundry room, has
+Dialogue: 0,0:01:26.98,0:01:27.38,Default,,0,0,0,,for her, becasue its {\c&H00FF00FF}close{\c&H00FFFFFF} to the laundry room, has
+Dialogue: 0,0:01:27.38,0:01:27.54,Default,,0,0,0,,for her, becasue its close {\c&H00FF00FF}to{\c&H00FFFFFF} the laundry room, has
+Dialogue: 0,0:01:27.54,0:01:27.78,Default,,0,0,0,,for her, becasue its close to {\c&H00FF00FF}the{\c&H00FFFFFF} laundry room, has
+Dialogue: 0,0:01:27.78,0:01:28.35,Default,,0,0,0,,for her, becasue its close to the {\c&H00FF00FF}laundry{\c&H00FFFFFF} room, has
+Dialogue: 0,0:01:28.35,0:01:28.75,Default,,0,0,0,,for her, becasue its close to the laundry {\c&H00FF00FF}room,{\c&H00FFFFFF} has
+Dialogue: 0,0:01:28.75,0:01:28.99,Default,,0,0,0,,for her, becasue its close to the laundry room, {\c&H00FF00FF}has{\c&H00FFFFFF}
+Dialogue: 0,0:01:28.99,0:01:29.14,Default,,0,0,0,,{\c&H00FF00FF}a{\c&H00FFFFFF} window that faces the quad, etc.
+Dialogue: 0,0:01:29.14,0:01:29.63,Default,,0,0,0,,a {\c&H00FF00FF}window{\c&H00FFFFFF} that faces the quad, etc.
+Dialogue: 0,0:01:29.63,0:01:29.95,Default,,0,0,0,,a window {\c&H00FF00FF}that{\c&H00FFFFFF} faces the quad, etc.
+Dialogue: 0,0:01:29.95,0:01:30.35,Default,,0,0,0,,a window that {\c&H00FF00FF}faces{\c&H00FFFFFF} the quad, etc.
+Dialogue: 0,0:01:30.35,0:01:30.59,Default,,0,0,0,,a window that faces {\c&H00FF00FF}the{\c&H00FFFFFF} quad, etc.
+Dialogue: 0,0:01:30.59,0:01:31.00,Default,,0,0,0,,a window that faces the {\c&H00FF00FF}quad,{\c&H00FFFFFF} etc.
+Dialogue: 0,0:01:31.00,0:01:31.32,Default,,0,0,0,,a window that faces the quad, {\c&H00FF00FF}etc.{\c&H00FFFFFF}
+Dialogue: 0,0:01:31.72,0:01:31.87,Default,,0,0,0,,{\c&H00FF00FF}I{\c&H00FFFFFF} feel bad, because she said that she lives out
+Dialogue: 0,0:01:31.87,0:01:32.18,Default,,0,0,0,,I {\c&H00FF00FF}feel{\c&H00FFFFFF} bad, because she said that she lives out
+Dialogue: 0,0:01:32.18,0:01:32.50,Default,,0,0,0,,I feel {\c&H00FF00FF}bad,{\c&H00FFFFFF} because she said that she lives out
+Dialogue: 0,0:01:32.50,0:01:33.04,Default,,0,0,0,,I feel bad, {\c&H00FF00FF}because{\c&H00FFFFFF} she said that she lives out
+Dialogue: 0,0:01:33.04,0:01:33.28,Default,,0,0,0,,I feel bad, because {\c&H00FF00FF}she{\c&H00FFFFFF} said that she lives out
+Dialogue: 0,0:01:33.28,0:01:33.59,Default,,0,0,0,,I feel bad, because she {\c&H00FF00FF}said{\c&H00FFFFFF} that she lives out
+Dialogue: 0,0:01:33.59,0:01:33.91,Default,,0,0,0,,I feel bad, because she said {\c&H00FF00FF}that{\c&H00FFFFFF} she lives out
+Dialogue: 0,0:01:33.91,0:01:34.14,Default,,0,0,0,,I feel bad, because she said that {\c&H00FF00FF}she{\c&H00FFFFFF} lives out
+Dialogue: 0,0:01:34.14,0:01:34.54,Default,,0,0,0,,I feel bad, because she said that she {\c&H00FF00FF}lives{\c&H00FFFFFF} out
+Dialogue: 0,0:01:34.54,0:01:34.77,Default,,0,0,0,,I feel bad, because she said that she lives {\c&H00FF00FF}out{\c&H00FFFFFF}
+Dialogue: 0,0:01:34.77,0:01:34.93,Default,,0,0,0,,{\c&H00FF00FF}of{\c&H00FFFFFF} state, and has to spend all weekends and smaller
+Dialogue: 0,0:01:34.93,0:01:35.40,Default,,0,0,0,,of {\c&H00FF00FF}state,{\c&H00FFFFFF} and has to spend all weekends and smaller
+Dialogue: 0,0:01:35.40,0:01:35.63,Default,,0,0,0,,of state, {\c&H00FF00FF}and{\c&H00FFFFFF} has to spend all weekends and smaller
+Dialogue: 0,0:01:35.63,0:01:35.87,Default,,0,0,0,,of state, and {\c&H00FF00FF}has{\c&H00FFFFFF} to spend all weekends and smaller
+Dialogue: 0,0:01:35.87,0:01:36.03,Default,,0,0,0,,of state, and has {\c&H00FF00FF}to{\c&H00FFFFFF} spend all weekends and smaller
+Dialogue: 0,0:01:36.03,0:01:36.42,Default,,0,0,0,,of state, and has to {\c&H00FF00FF}spend{\c&H00FFFFFF} all weekends and smaller
+Dialogue: 0,0:01:36.42,0:01:36.65,Default,,0,0,0,,of state, and has to spend {\c&H00FF00FF}all{\c&H00FFFFFF} weekends and smaller
+Dialogue: 0,0:01:36.65,0:01:37.28,Default,,0,0,0,,of state, and has to spend all {\c&H00FF00FF}weekends{\c&H00FFFFFF} and smaller
+Dialogue: 0,0:01:37.28,0:01:37.52,Default,,0,0,0,,of state, and has to spend all weekends {\c&H00FF00FF}and{\c&H00FFFFFF} smaller
+Dialogue: 0,0:01:37.52,0:01:38.07,Default,,0,0,0,,of state, and has to spend all weekends and {\c&H00FF00FF}smaller{\c&H00FFFFFF}
+Dialogue: 0,0:01:38.07,0:01:38.54,Default,,0,0,0,,{\c&H00FF00FF}breaks{\c&H00FFFFFF} on campus, whereas I live pretty close by and
+Dialogue: 0,0:01:38.54,0:01:38.69,Default,,0,0,0,,breaks {\c&H00FF00FF}on{\c&H00FFFFFF} campus, whereas I live pretty close by and
+Dialogue: 0,0:01:38.69,0:01:39.24,Default,,0,0,0,,breaks on {\c&H00FF00FF}campus,{\c&H00FFFFFF} whereas I live pretty close by and
+Dialogue: 0,0:01:39.24,0:01:39.79,Default,,0,0,0,,breaks on campus, {\c&H00FF00FF}whereas{\c&H00FFFFFF} I live pretty close by and
+Dialogue: 0,0:01:39.79,0:01:39.94,Default,,0,0,0,,breaks on campus, whereas {\c&H00FF00FF}I{\c&H00FFFFFF} live pretty close by and
+Dialogue: 0,0:01:39.94,0:01:40.25,Default,,0,0,0,,breaks on campus, whereas I {\c&H00FF00FF}live{\c&H00FFFFFF} pretty close by and
+Dialogue: 0,0:01:40.25,0:01:40.72,Default,,0,0,0,,breaks on campus, whereas I live {\c&H00FF00FF}pretty{\c&H00FFFFFF} close by and
+Dialogue: 0,0:01:40.72,0:01:41.12,Default,,0,0,0,,breaks on campus, whereas I live pretty {\c&H00FF00FF}close{\c&H00FFFFFF} by and
+Dialogue: 0,0:01:41.12,0:01:41.27,Default,,0,0,0,,breaks on campus, whereas I live pretty close {\c&H00FF00FF}by{\c&H00FFFFFF} and
+Dialogue: 0,0:01:41.27,0:01:41.51,Default,,0,0,0,,breaks on campus, whereas I live pretty close by {\c&H00FF00FF}and{\c&H00FFFFFF}
+Dialogue: 0,0:01:41.51,0:01:42.29,Default,,0,0,0,,{\c&H00FF00FF}frequently{\c&H00FFFFFF} go to my own house, basically whenever I want.
+Dialogue: 0,0:01:42.29,0:01:42.45,Default,,0,0,0,,frequently {\c&H00FF00FF}go{\c&H00FFFFFF} to my own house, basically whenever I want.
+Dialogue: 0,0:01:42.45,0:01:42.61,Default,,0,0,0,,frequently go {\c&H00FF00FF}to{\c&H00FFFFFF} my own house, basically whenever I want.
+Dialogue: 0,0:01:42.61,0:01:42.76,Default,,0,0,0,,frequently go to {\c&H00FF00FF}my{\c&H00FFFFFF} own house, basically whenever I want.
+Dialogue: 0,0:01:42.76,0:01:43.00,Default,,0,0,0,,frequently go to my {\c&H00FF00FF}own{\c&H00FFFFFF} house, basically whenever I want.
+Dialogue: 0,0:01:43.00,0:01:43.47,Default,,0,0,0,,frequently go to my own {\c&H00FF00FF}house,{\c&H00FFFFFF} basically whenever I want.
+Dialogue: 0,0:01:43.47,0:01:44.18,Default,,0,0,0,,frequently go to my own house, {\c&H00FF00FF}basically{\c&H00FFFFFF} whenever I want.
+Dialogue: 0,0:01:44.18,0:01:44.80,Default,,0,0,0,,frequently go to my own house, basically {\c&H00FF00FF}whenever{\c&H00FFFFFF} I want.
+Dialogue: 0,0:01:44.80,0:01:44.95,Default,,0,0,0,,frequently go to my own house, basically whenever {\c&H00FF00FF}I{\c&H00FFFFFF} want.
+Dialogue: 0,0:01:44.95,0:01:45.34,Default,,0,0,0,,frequently go to my own house, basically whenever I {\c&H00FF00FF}want.{\c&H00FFFFFF}
+Dialogue: 0,0:01:45.34,0:01:45.58,Default,,0,0,0,,{\c&H00FF00FF}And{\c&H00FFFFFF} because she is also new and doesn't have many
+Dialogue: 0,0:01:45.58,0:01:46.13,Default,,0,0,0,,And {\c&H00FF00FF}because{\c&H00FFFFFF} she is also new and doesn't have many
+Dialogue: 0,0:01:46.13,0:01:46.36,Default,,0,0,0,,And because {\c&H00FF00FF}she{\c&H00FFFFFF} is also new and doesn't have many
+Dialogue: 0,0:01:46.36,0:01:46.52,Default,,0,0,0,,And because she {\c&H00FF00FF}is{\c&H00FFFFFF} also new and doesn't have many
+Dialogue: 0,0:01:46.52,0:01:46.84,Default,,0,0,0,,And because she is {\c&H00FF00FF}also{\c&H00FFFFFF} new and doesn't have many
+Dialogue: 0,0:01:46.84,0:01:47.07,Default,,0,0,0,,And because she is also {\c&H00FF00FF}new{\c&H00FFFFFF} and doesn't have many
+Dialogue: 0,0:01:47.07,0:01:47.31,Default,,0,0,0,,And because she is also new {\c&H00FF00FF}and{\c&H00FFFFFF} doesn't have many
+Dialogue: 0,0:01:47.31,0:01:47.86,Default,,0,0,0,,And because she is also new and {\c&H00FF00FF}doesn't{\c&H00FFFFFF} have many
+Dialogue: 0,0:01:47.86,0:01:48.17,Default,,0,0,0,,And because she is also new and doesn't {\c&H00FF00FF}have{\c&H00FFFFFF} many
+Dialogue: 0,0:01:48.17,0:01:48.48,Default,,0,0,0,,And because she is also new and doesn't have {\c&H00FF00FF}many{\c&H00FFFFFF}
+Dialogue: 0,0:01:48.48,0:01:49.03,Default,,0,0,0,,{\c&H00FF00FF}friends{\c&H00FFFFFF} on campus, she's also probably gonna spend a lot
+Dialogue: 0,0:01:49.03,0:01:49.19,Default,,0,0,0,,friends {\c&H00FF00FF}on{\c&H00FFFFFF} campus, she's also probably gonna spend a lot
+Dialogue: 0,0:01:49.19,0:01:49.74,Default,,0,0,0,,friends on {\c&H00FF00FF}campus,{\c&H00FFFFFF} she's also probably gonna spend a lot
+Dialogue: 0,0:01:49.74,0:01:50.13,Default,,0,0,0,,friends on campus, {\c&H00FF00FF}she's{\c&H00FFFFFF} also probably gonna spend a lot
+Dialogue: 0,0:01:50.13,0:01:50.44,Default,,0,0,0,,friends on campus, she's {\c&H00FF00FF}also{\c&H00FFFFFF} probably gonna spend a lot
+Dialogue: 0,0:01:50.44,0:01:51.07,Default,,0,0,0,,friends on campus, she's also {\c&H00FF00FF}probably{\c&H00FFFFFF} gonna spend a lot
+Dialogue: 0,0:01:51.07,0:01:51.46,Default,,0,0,0,,friends on campus, she's also probably {\c&H00FF00FF}gonna{\c&H00FFFFFF} spend a lot
+Dialogue: 0,0:01:51.46,0:01:51.86,Default,,0,0,0,,friends on campus, she's also probably gonna {\c&H00FF00FF}spend{\c&H00FFFFFF} a lot
+Dialogue: 0,0:01:51.86,0:01:52.00,Default,,0,0,0,,friends on campus, she's also probably gonna spend {\c&H00FF00FF}a{\c&H00FFFFFF} lot
+Dialogue: 0,0:01:52.00,0:01:52.24,Default,,0,0,0,,friends on campus, she's also probably gonna spend a {\c&H00FF00FF}lot{\c&H00FFFFFF}
+Dialogue: 0,0:01:52.24,0:01:52.40,Default,,0,0,0,,{\c&H00FF00FF}of{\c&H00FFFFFF} time in the dorm.
+Dialogue: 0,0:01:52.40,0:01:52.71,Default,,0,0,0,,of {\c&H00FF00FF}time{\c&H00FFFFFF} in the dorm.
+Dialogue: 0,0:01:52.71,0:01:52.87,Default,,0,0,0,,of time {\c&H00FF00FF}in{\c&H00FFFFFF} the dorm.
+Dialogue: 0,0:01:52.87,0:01:53.10,Default,,0,0,0,,of time in {\c&H00FF00FF}the{\c&H00FFFFFF} dorm.
+Dialogue: 0,0:01:53.10,0:01:53.50,Default,,0,0,0,,of time in the {\c&H00FF00FF}dorm.{\c&H00FFFFFF}
+Dialogue: 0,0:01:53.90,0:01:54.04,Default,,0,0,0,,{\c&H00FF00FF}I{\c&H00FFFFFF} talked to my school before break, and they said
+Dialogue: 0,0:01:54.04,0:01:54.52,Default,,0,0,0,,I {\c&H00FF00FF}talked{\c&H00FFFFFF} to my school before break, and they said
+Dialogue: 0,0:01:54.52,0:01:54.69,Default,,0,0,0,,I talked {\c&H00FF00FF}to{\c&H00FFFFFF} my school before break, and they said
+Dialogue: 0,0:01:54.69,0:01:54.85,Default,,0,0,0,,I talked to {\c&H00FF00FF}my{\c&H00FFFFFF} school before break, and they said
+Dialogue: 0,0:01:54.85,0:01:55.33,Default,,0,0,0,,I talked to my {\c&H00FF00FF}school{\c&H00FFFFFF} before break, and they said
+Dialogue: 0,0:01:55.33,0:01:55.82,Default,,0,0,0,,I talked to my school {\c&H00FF00FF}before{\c&H00FFFFFF} break, and they said
+Dialogue: 0,0:01:55.82,0:01:56.30,Default,,0,0,0,,I talked to my school before {\c&H00FF00FF}break,{\c&H00FFFFFF} and they said
+Dialogue: 0,0:01:56.30,0:01:56.54,Default,,0,0,0,,I talked to my school before break, {\c&H00FF00FF}and{\c&H00FFFFFF} they said
+Dialogue: 0,0:01:56.54,0:01:56.87,Default,,0,0,0,,I talked to my school before break, and {\c&H00FF00FF}they{\c&H00FFFFFF} said
+Dialogue: 0,0:01:56.87,0:01:57.19,Default,,0,0,0,,I talked to my school before break, and they {\c&H00FF00FF}said{\c&H00FFFFFF}
+Dialogue: 0,0:01:57.19,0:01:57.33,Default,,0,0,0,,{\c&H00FF00FF}I{\c&H00FFFFFF} don't have to do it, but if I wanted
+Dialogue: 0,0:01:57.33,0:01:57.74,Default,,0,0,0,,I {\c&H00FF00FF}don't{\c&H00FFFFFF} have to do it, but if I wanted
+Dialogue: 0,0:01:57.74,0:01:58.06,Default,,0,0,0,,I don't {\c&H00FF00FF}have{\c&H00FFFFFF} to do it, but if I wanted
+Dialogue: 0,0:01:58.06,0:01:58.22,Default,,0,0,0,,I don't have {\c&H00FF00FF}to{\c&H00FFFFFF} do it, but if I wanted
+Dialogue: 0,0:01:58.22,0:01:58.38,Default,,0,0,0,,I don't have to {\c&H00FF00FF}do{\c&H00FFFFFF} it, but if I wanted
+Dialogue: 0,0:01:58.38,0:01:58.63,Default,,0,0,0,,I don't have to do {\c&H00FF00FF}it,{\c&H00FFFFFF} but if I wanted
+Dialogue: 0,0:01:58.63,0:01:58.87,Default,,0,0,0,,I don't have to do it, {\c&H00FF00FF}but{\c&H00FFFFFF} if I wanted
+Dialogue: 0,0:01:58.87,0:01:59.03,Default,,0,0,0,,I don't have to do it, but {\c&H00FF00FF}if{\c&H00FFFFFF} I wanted
+Dialogue: 0,0:01:59.03,0:01:59.18,Default,,0,0,0,,I don't have to do it, but if {\c&H00FF00FF}I{\c&H00FFFFFF} wanted
+Dialogue: 0,0:01:59.18,0:01:59.66,Default,,0,0,0,,I don't have to do it, but if I {\c&H00FF00FF}wanted{\c&H00FFFFFF}
+Dialogue: 0,0:01:59.66,0:01:59.90,Default,,0,0,0,,{\c&H00FF00FF}to,{\c&H00FFFFFF} I could be switched to an open single on
+Dialogue: 0,0:01:59.90,0:02:00.05,Default,,0,0,0,,to, {\c&H00FF00FF}I{\c&H00FFFFFF} could be switched to an open single on
+Dialogue: 0,0:02:00.05,0:02:00.45,Default,,0,0,0,,to, I {\c&H00FF00FF}could{\c&H00FFFFFF} be switched to an open single on
+Dialogue: 0,0:02:00.45,0:02:00.61,Default,,0,0,0,,to, I could {\c&H00FF00FF}be{\c&H00FFFFFF} switched to an open single on
+Dialogue: 0,0:02:00.61,0:02:01.26,Default,,0,0,0,,to, I could be {\c&H00FF00FF}switched{\c&H00FFFFFF} to an open single on
+Dialogue: 0,0:02:01.26,0:02:01.42,Default,,0,0,0,,to, I could be switched {\c&H00FF00FF}to{\c&H00FFFFFF} an open single on
+Dialogue: 0,0:02:01.42,0:02:01.58,Default,,0,0,0,,to, I could be switched to {\c&H00FF00FF}an{\c&H00FFFFFF} open single on
+Dialogue: 0,0:02:01.58,0:02:01.90,Default,,0,0,0,,to, I could be switched to an {\c&H00FF00FF}open{\c&H00FFFFFF} single on
+Dialogue: 0,0:02:01.90,0:02:02.39,Default,,0,0,0,,to, I could be switched to an open {\c&H00FF00FF}single{\c&H00FFFFFF} on
+Dialogue: 0,0:02:02.39,0:02:02.55,Default,,0,0,0,,to, I could be switched to an open single {\c&H00FF00FF}on{\c&H00FFFFFF}
+Dialogue: 0,0:02:02.55,0:02:03.12,Default,,0,0,0,,{\c&H00FF00FF}campus.{\c&H00FFFFFF} I really love my dorm and don't want to
+Dialogue: 0,0:02:03.12,0:02:03.26,Default,,0,0,0,,campus. {\c&H00FF00FF}I{\c&H00FFFFFF} really love my dorm and don't want to
+Dialogue: 0,0:02:03.26,0:02:03.75,Default,,0,0,0,,campus. I {\c&H00FF00FF}really{\c&H00FFFFFF} love my dorm and don't want to
+Dialogue: 0,0:02:03.75,0:02:04.07,Default,,0,0,0,,campus. I really {\c&H00FF00FF}love{\c&H00FFFFFF} my dorm and don't want to
+Dialogue: 0,0:02:04.07,0:02:04.23,Default,,0,0,0,,campus. I really love {\c&H00FF00FF}my{\c&H00FFFFFF} dorm and don't want to
+Dialogue: 0,0:02:04.23,0:02:04.55,Default,,0,0,0,,campus. I really love my {\c&H00FF00FF}dorm{\c&H00FFFFFF} and don't want to
+Dialogue: 0,0:02:04.55,0:02:04.80,Default,,0,0,0,,campus. I really love my dorm {\c&H00FF00FF}and{\c&H00FFFFFF} don't want to
+Dialogue: 0,0:02:04.80,0:02:05.20,Default,,0,0,0,,campus. I really love my dorm and {\c&H00FF00FF}don't{\c&H00FFFFFF} want to
+Dialogue: 0,0:02:05.20,0:02:05.52,Default,,0,0,0,,campus. I really love my dorm and don't {\c&H00FF00FF}want{\c&H00FFFFFF} to
+Dialogue: 0,0:02:05.52,0:02:05.68,Default,,0,0,0,,campus. I really love my dorm and don't want {\c&H00FF00FF}to{\c&H00FFFFFF}
+Dialogue: 0,0:02:05.68,0:02:06.25,Default,,0,0,0,,{\c&H00FF00FF}switch,{\c&H00FFFFFF} but I feel like I would be a dickhead
+Dialogue: 0,0:02:06.25,0:02:06.49,Default,,0,0,0,,switch, {\c&H00FF00FF}but{\c&H00FFFFFF} I feel like I would be a dickhead
+Dialogue: 0,0:02:06.49,0:02:06.64,Default,,0,0,0,,switch, but {\c&H00FF00FF}I{\c&H00FFFFFF} feel like I would be a dickhead
+Dialogue: 0,0:02:06.64,0:02:06.96,Default,,0,0,0,,switch, but I {\c&H00FF00FF}feel{\c&H00FFFFFF} like I would be a dickhead
+Dialogue: 0,0:02:06.96,0:02:07.28,Default,,0,0,0,,switch, but I feel {\c&H00FF00FF}like{\c&H00FFFFFF} I would be a dickhead
+Dialogue: 0,0:02:07.28,0:02:07.43,Default,,0,0,0,,switch, but I feel like {\c&H00FF00FF}I{\c&H00FFFFFF} would be a dickhead
+Dialogue: 0,0:02:07.43,0:02:07.83,Default,,0,0,0,,switch, but I feel like I {\c&H00FF00FF}would{\c&H00FFFFFF} be a dickhead
+Dialogue: 0,0:02:07.83,0:02:07.99,Default,,0,0,0,,switch, but I feel like I would {\c&H00FF00FF}be{\c&H00FFFFFF} a dickhead
+Dialogue: 0,0:02:07.99,0:02:08.14,Default,,0,0,0,,switch, but I feel like I would be {\c&H00FF00FF}a{\c&H00FFFFFF} dickhead
+Dialogue: 0,0:02:08.14,0:02:08.78,Default,,0,0,0,,switch, but I feel like I would be a {\c&H00FF00FF}dickhead{\c&H00FFFFFF}
+Dialogue: 0,0:02:08.78,0:02:08.94,Default,,0,0,0,,{\c&H00FF00FF}if{\c&H00FFFFFF} I don't, so WIBTA?
+Dialogue: 0,0:02:08.94,0:02:09.09,Default,,0,0,0,,if {\c&H00FF00FF}I{\c&H00FFFFFF} don't, so WIBTA?
+Dialogue: 0,0:02:09.09,0:02:09.57,Default,,0,0,0,,if I {\c&H00FF00FF}don't,{\c&H00FFFFFF} so WIBTA?
+Dialogue: 0,0:02:09.57,0:02:09.74,Default,,0,0,0,,if I don't, {\c&H00FF00FF}so{\c&H00FFFFFF} WIBTA?
+Dialogue: 0,0:02:09.74,0:02:10.22,Default,,0,0,0,,if I don't, so {\c&H00FF00FF}WIBTA?{\c&H00FFFFFF}

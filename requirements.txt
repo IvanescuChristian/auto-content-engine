@@ -8,3 +8,5 @@ kokoro>=0.9.4
 soundfile
 numpy
 BingImageCreator
+git+https://github.com/Aider-AI/aider.git
+transformers

@@ -21,8 +21,8 @@ def format_ass_time(seconds):
 
 
 def generate_karaoke_ass(chunk_timings, output_ass="short_subs.ass",
-                          font_size=21, highlight_color=None,
-                          is_vertical=True, words_per_group=5):
+                         font_size=90, highlight_color=None,
+                         is_vertical=True, words_per_group=5):
     """
     Genereaza subtitrari ASS cu highlight pe cuvantul curent.
     
@@ -43,10 +43,10 @@ def generate_karaoke_ass(chunk_timings, output_ass="short_subs.ass",
     # Rezolutie video
     if is_vertical:
         res_x, res_y = 1080, 1920
-        margin_v = 200
+        margin_v = 800
     else:
         res_x, res_y = 1920, 1080
-        margin_v = 50
+        margin_v = 100
 
     # Header ASS
     header = f"""[Script Info]
@@ -59,7 +59,7 @@ ScaledBorderAndShadow: yes
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
-Style: Default,Arial,{font_size},{COLOR_NORMAL},{highlight_color},&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,3,1,2,20,20,{margin_v},1
+Style: Default,Arial,{font_size},{COLOR_NORMAL},{highlight_color},&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,8,0,2,40,40,{margin_v},1
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
@@ -67,7 +67,16 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
 
     dialogues = []
 
-    for chunk_start, chunk_end, chunk_text in chunk_timings:
+    for chunk in chunk_timings:
+        if isinstance(chunk, dict):
+            chunk_text = chunk.get("text", "")
+            chunk_start = float(chunk.get("start", 0.0))
+            chunk_end = float(chunk.get("end", 0.0))
+        else:
+            chunk_start, chunk_end, chunk_text = chunk
+            chunk_start = float(chunk_start)
+            chunk_end = float(chunk_end)
+
         if not chunk_text or not chunk_text.strip():
             continue
 
@@ -142,7 +151,7 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
 
 
 def generate_karaoke_simple(chunk_timings, output_ass="short_subs.ass",
-                             font_size=21, highlight_color=None,
+                             font_size=90, highlight_color=None,
                              is_vertical=True):
     """
     Varianta simplificata — arata tot chunk-ul, highlight cuvant cu cuvant.
@@ -153,10 +162,10 @@ def generate_karaoke_simple(chunk_timings, output_ass="short_subs.ass",
 
     if is_vertical:
         res_x, res_y = 1080, 1920
-        margin_v = 200
+        margin_v = 800
     else:
         res_x, res_y = 1920, 1080
-        margin_v = 50
+        margin_v = 100
 
     header = f"""[Script Info]
 Title: Karaoke Subtitles
@@ -168,7 +177,7 @@ ScaledBorderAndShadow: yes
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
-Style: Default,Arial,{font_size},{COLOR_NORMAL},{highlight_color},&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,3,1,2,20,20,{margin_v},1
+Style: Default,Arial,{font_size},{COLOR_NORMAL},{highlight_color},&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,8,0,2,40,40,{margin_v},1
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
@@ -176,7 +185,16 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
 
     dialogues = []
 
-    for chunk_start, chunk_end, chunk_text in chunk_timings:
+    for chunk in chunk_timings:
+        if isinstance(chunk, dict):
+            chunk_text = chunk.get("text", "")
+            chunk_start = float(chunk.get("start", 0.0))
+            chunk_end = float(chunk.get("end", 0.0))
+        else:
+            chunk_start, chunk_end, chunk_text = chunk
+            chunk_start = float(chunk_start)
+            chunk_end = float(chunk_end)
+
         if not chunk_text or not chunk_text.strip():
             continue
 

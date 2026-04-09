@@ -1,0 +1,32 @@
+[Script Info]
+Title: Karaoke Subtitles Smooth
+ScriptType: v4.00+
+WrapStyle: 1
+PlayResX: 1080
+PlayResY: 1920
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,65,&H00FF00FF,&H00FFFFFF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,8,0,2,40,40,800,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:02.58,Default,,0,0,0,,{\kf23}Now {\kf23}the {\kf39}event {\kf15}is {\kf47}coming {\kf15}up {\kf47}again. {\kf47}Friend
+Dialogue: 0,0:00:02.58,0:00:04.85,Default,,0,0,0,,{\kf15}1, {\kf23}the {\kf39}nicer {\kf31}one, {\kf39}asked {\kf15}if {\kf23}she {\kf39}could
+Dialogue: 0,0:00:04.85,0:00:07.05,Default,,0,0,0,,{\kf31}come {\kf31}over {\kf15}to {\kf23}get {\kf39}ready {\kf15}at {\kf15}my {\kf47}place.
+Dialogue: 0,0:00:07.05,0:00:09.70,Default,,0,0,0,,{\kf14}I {\kf31}said {\kf15}no {\kf31}this {\kf31}time {\kf54}because {\kf15}we {\kf70}currently
+Dialogue: 0,0:00:09.70,0:00:12.60,Default,,0,0,0,,{\kf31}have {\kf70}relatives {\kf31}over {\kf23}and {\kf31}also {\kf54}someone {\kf15}at {\kf31}home
+Dialogue: 0,0:00:12.60,0:00:14.94,Default,,0,0,0,,{\kf31}just {\kf23}had {\kf62}surgery, {\kf15}so {\kf31}it’s {\kf23}not {\kf14}a {\kf31}good
+Dialogue: 0,0:00:14.94,0:00:18.47,Default,,0,0,0,,{\kf78}situation. {\kf23}She {\kf78}understood {\kf23}and {\kf31}said {\kf47}she’ll {\kf31}make {\kf39}other
+Dialogue: 0,0:00:18.47,0:00:21.83,Default,,0,0,0,,{\kf101}arrangements, {\kf23}she {\kf23}has {\kf39}other {\kf54}friends {\kf23}who {\kf31}live {\kf39}close
+Dialogue: 0,0:00:21.83,0:00:23.25,Default,,0,0,0,,{\kf15}to {\kf23}the {\kf39}venue {\kf62}anyway,.
+Dialogue: 0,0:00:23.64,0:00:26.55,Default,,0,0,0,,{\kf31}Then {\kf23}the {\kf39}other {\kf31}girl {\kf47}starts {\kf54}texting {\kf15}me {\kf47}things
+Dialogue: 0,0:00:26.55,0:00:29.45,Default,,0,0,0,,{\kf39}like, {\kf39}“I’ll {\kf62}probably {\kf15}be {\kf39}late” {\kf39}“It’s {\kf23}too {\kf31}far”
+Dialogue: 0,0:00:29.45,0:00:32.18,Default,,0,0,0,,{\kf39}“Uber {\kf15}is {\kf78}expensive” {\kf31}“How {\kf31}will {\kf14}I {\kf47}travel {\kf15}in
+Dialogue: 0,0:00:32.18,0:00:35.16,Default,,0,0,0,,{\kf31}that {\kf54}outfit” {\kf70}etcetera. {\kf23}The {\kf39}thing {\kf15}is {\kf23}she {\kf39}NEVER
+Dialogue: 0,0:00:35.16,0:00:38.37,Default,,0,0,0,,{\kf62}directly {\kf31}asks {\kf23}for {\kf70}anything. {\kf23}She {\kf31}just {\kf31}says {\kf47}things
+Dialogue: 0,0:00:38.37,0:00:40.64,Default,,0,0,0,,{\kf15}in {\kf14}a {\kf23}way {\kf15}so {\kf31}that {\kf47}others {\kf39}offer {\kf39}help.
+Dialogue: 0,0:00:40.64,0:00:43.38,Default,,0,0,0,,{\kf23}And {\kf31}once {\kf31}they {\kf23}do, {\kf23}she {\kf31}acts {\kf94}uninterested {\kf15}or
+Dialogue: 0,0:00:43.38,0:00:46.99,Default,,0,0,0,,{\kf86}ungrateful, {\kf31}even {\kf47}though {\kf23}she {\kf54}clearly {\kf39}needs {\kf31}it.. {\kf47}Follow
+Dialogue: 0,0:00:46.99,0:00:47.70,Default,,0,0,0,,{\kf23}for {\kf31}part {\kf15}4.

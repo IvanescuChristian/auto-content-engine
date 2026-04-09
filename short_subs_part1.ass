@@ -1,0 +1,31 @@
+[Script Info]
+Title: Karaoke Subtitles Smooth
+ScriptType: v4.00+
+WrapStyle: 1
+PlayResX: 1080
+PlayResY: 1920
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,65,&H00FF00FF,&H00FFFFFF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,8,0,2,40,40,800,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:02.48,Default,,0,0,0,,{\kf16}Am {\kf14}I {\kf24}the {\kf56}asshole {\kf24}for {\kf56}playing {\kf32}dumb {\kf24}and
+Dialogue: 0,0:00:02.48,0:00:05.60,Default,,0,0,0,,{\kf24}not {\kf64}offering {\kf16}my {\kf40}house {\kf16}as {\kf14}a {\kf104}getting-ready {\kf32}spot
+Dialogue: 0,0:00:05.60,0:00:07.93,Default,,0,0,0,,{\kf24}for {\kf14}a {\kf48}friend {\kf24}who {\kf56}refuses {\kf16}to {\kf24}ask {\kf24}for
+Dialogue: 0,0:00:07.93,0:00:10.81,Default,,0,0,0,,{\kf32}help {\kf80}directly?. {\kf24}So, {\kf32}from {\kf24}the {\kf32}last {\kf14}3 {\kf48}years,
+Dialogue: 0,0:00:10.81,0:00:13.13,Default,,0,0,0,,{\kf16}my {\kf40}frnds {\kf24}and {\kf32}amp, {\kf14}I {\kf32}have {\kf32}been {\kf40}going
+Dialogue: 0,0:00:13.13,0:00:16.19,Default,,0,0,0,,{\kf16}to {\kf32}this {\kf40}event {\kf16}or {\kf56}concert {\kf40}every {\kf40}year. {\kf64}Earlier,
+Dialogue: 0,0:00:16.19,0:00:18.75,Default,,0,0,0,,{\kf14}2 {\kf16}of {\kf32}them {\kf40}lived {\kf40}right {\kf48}behind {\kf24}the {\kf40}venue
+Dialogue: 0,0:00:18.75,0:00:22.22,Default,,0,0,0,,{\kf56}street, {\kf72}different {\kf56}flats,, {\kf16}so {\kf16}it {\kf24}was {\kf80}convenient {\kf24}for
+Dialogue: 0,0:00:22.22,0:00:22.62,Default,,0,0,0,,{\kf40}them.
+Dialogue: 0,0:00:23.02,0:00:25.26,Default,,0,0,0,,{\kf14}I {\kf31}live {\kf23}far {\kf31}away {\kf31}with {\kf15}my {\kf62}parents. {\kf14}2
+Dialogue: 0,0:00:25.26,0:00:28.05,Default,,0,0,0,,{\kf38}years {\kf31}ago, {\kf14}I {\kf69}suggested {\kf31}that {\kf31}they {\kf31}come {\kf31}over
+Dialogue: 0,0:00:28.05,0:00:30.77,Default,,0,0,0,,{\kf15}to {\kf15}my {\kf38}place {\kf15}to {\kf23}get {\kf54}dressed {\kf62}together {\kf46}before
+Dialogue: 0,0:00:30.77,0:00:33.09,Default,,0,0,0,,{\kf23}the {\kf46}event. {\kf14}I {\kf54}thought {\kf15}it {\kf38}would {\kf15}be {\kf23}fun
+Dialogue: 0,0:00:33.09,0:00:35.81,Default,,0,0,0,,{\kf23}and {\kf15}we {\kf38}could {\kf31}help {\kf31}each {\kf38}other {\kf31}with {\kf62}outfits,
+Dialogue: 0,0:00:35.81,0:00:38.84,Default,,0,0,0,,{\kf54}makeup, {\kf69}etcetera. {\kf23}One {\kf46}friend {\kf23}was {\kf31}fine {\kf31}with {\kf23}it,
+Dialogue: 0,0:00:38.84,0:00:41.95,Default,,0,0,0,,{\kf23}the {\kf38}other {\kf23}one {\kf46}wasn’t {\kf77}interested {\kf15}at {\kf38}all.. {\kf46}Follow
+Dialogue: 0,0:00:41.95,0:00:42.64,Default,,0,0,0,,{\kf23}for {\kf31}part {\kf15}2.

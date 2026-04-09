@@ -48,32 +48,68 @@ def strip_markdown(text):
 
 
 def strip_reddit_formatting(text):
-    """Scoate formatari specifice Reddit."""
-    # Reddit quotes
+    """Scoate formatari specifice Reddit si expandeaza abrevierile."""
+    # Reddit quotes & links
     text = re.sub(r'^&gt;\s*', '', text, flags=re.MULTILINE)
-    # Subreddit links
     text = re.sub(r'r/(\w+)', r'\1 subreddit', text)
-    # User links
     text = re.sub(r'u/(\w+)', r'\1', text)
-    # Edit notes
+    
+    # Edit & Update notes
     text = re.sub(r'(?i)\bEDIT\s*\d*\s*:', 'Edit:', text)
-    # TL;DR
-    text = re.sub(r'(?i)TL;?DR\s*:?', 'In short,', text)
-    # AITA / AITAH
-    text = re.sub(r'\bAITA[H]?\b', 'Am I the asshole', text)
-    # NTA, YTA, ESH, NAH
-    text = re.sub(r'\bNTA\b', 'not the asshole', text)
-    text = re.sub(r'\bYTA\b', 'you are the asshole', text)
-    text = re.sub(r'\bESH\b', 'everyone sucks here', text)
-    text = re.sub(r'\bNAH\b', 'no assholes here', text)
-    # SO, FIL, MIL, BIL, SIL
-    text = re.sub(r'\bSO\b', 'significant other', text)
-    text = re.sub(r'\bFIL\b', 'father in law', text)
-    text = re.sub(r'\bMIL\b', 'mother in law', text)
-    text = re.sub(r'\bBIL\b', 'brother in law', text)
-    text = re.sub(r'\bSIL\b', 'sister in law', text)
-    return text
+    text = re.sub(r'(?i)\bUPDATE\s*\d*\s*:', 'Update:', text)
 
+    # --- DICTIONAR SUPREM ABREVIERI REDDIT ---
+    # Atentie: Unele sunt case-insensitive (?i), altele sunt stricte 
+    # ca sa nu inlocuiasca cuvinte normale (ex: SO = significant other, so = deci).
+    reddit_dict = {
+        # --- NUME SUBREDDIT-URI ---
+        r'(?i)\bAmItheAsshole\b': 'Am I the asshole',
+        r'(?i)\brelationship_advice\b': 'relationship advice',
+        r'(?i)\bMaliciousCompliance\b': 'malicious compliance',
+        r'(?i)\bpettyrevenge\b': 'petty revenge',
+        r'(?i)\bProRevenge\b': 'pro revenge',
+        r'(?i)\bentitledparents\b': 'entitled parents',
+        r'(?i)\bTrueOffMyChest\b': 'true off my chest',
+        r'(?i)\bnosleep\b': 'no sleep',
+        r'(?i)\bLetsNotMeet\b': 'lets not meet',
+        r'(?i)\bUnresolvedMysteries\b': 'unresolved mysteries',
+        r'(?i)\baskreddit\b': 'ask reddit',
+        r'(?i)\btodayilearned\b': 'today I learned',
+        r'(?i)\bShowerthoughts\b': 'shower thoughts',
+        
+        # --- ABREVIERI REDDIT ---
+        r'(?i)\bTL;?DR\b': 'In short,',
+        r'(?i)\bWIBTA[H]?\b': 'would I be the asshole',
+        r'(?i)\bAITA[H]?\b': 'am I the asshole',
+        r'(?i)\bTIFU\b': 'today I messed up',
+        r'(?i)\bFWIW\b': 'for what it is worth',
+        r'(?i)\bIMO\b': 'in my opinion',
+        r'(?i)\bIMHO\b': 'in my humble opinion',
+        r'(?i)\bSMH\b': 'shaking my head',
+        r'(?i)\bIIRC\b': 'if I remember correctly',
+        r'\bYTA\b': 'you are the asshole',
+        r'\bNTA\b': 'not the asshole',
+        r'\bESH\b': 'everyone sucks here',
+        r'\bNAH\b': 'no assholes here',
+        r'\bOP\b': 'the original poster',
+        r'\bOOP\b': 'the original poster',
+        r'\bSO\b': 'significant other',
+        r'\bMIL\b': 'mother in law',
+        r'\bFIL\b': 'father in law',
+        r'\bBIL\b': 'brother in law',
+        r'\bSIL\b': 'sister in law',
+        r'\bSAHM\b': 'stay at home mom',
+        r'\bSAHD\b': 'stay at home dad',
+        r'\bNC\b': 'no contact',
+        r'\bLC\b': 'low contact',
+        r'\bSTBX\b': 'soon to be ex',
+        r'\bETA\b': 'edited to add',
+    }
+
+    for pattern, replacement in reddit_dict.items():
+        text = re.sub(pattern, replacement, text)
+
+    return text
 
 def strip_special_chars(text):
     """Scoate caractere pe care Kokoro le citeste ciudat."""

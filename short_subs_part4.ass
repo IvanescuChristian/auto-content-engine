@@ -1,0 +1,30 @@
+[Script Info]
+Title: Karaoke Subtitles Smooth
+ScriptType: v4.00+
+WrapStyle: 1
+PlayResX: 1080
+PlayResY: 1920
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,65,&H00FF00FF,&H00FFFFFF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,8,0,2,40,40,800,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:02.67,Default,,0,0,0,,{\kf68}Honestly, {\kf15}if {\kf22}she {\kf22}had {\kf61}directly {\kf38}asked {\kf22}me, {\kf14}I
+Dialogue: 0,0:00:02.67,0:00:05.43,Default,,0,0,0,,{\kf38}might {\kf30}have {\kf38}tried {\kf15}to {\kf45}figure {\kf68}something {\kf22}out {\kf15}or
+Dialogue: 0,0:00:05.43,0:00:07.88,Default,,0,0,0,,{\kf45}helped {\kf15}in {\kf30}some {\kf30}way. {\kf22}But {\kf22}she {\kf53}didn’t. {\kf22}And
+Dialogue: 0,0:00:07.88,0:00:10.09,Default,,0,0,0,,{\kf14}I {\kf45}didn’t {\kf30}want {\kf15}to {\kf38}bring {\kf15}it {\kf15}up {\kf45}myself
+Dialogue: 0,0:00:10.09,0:00:11.55,Default,,0,0,0,,{\kf22}and {\kf30}then {\kf30}have {\kf15}to {\kf22}say {\kf22}no.
+Dialogue: 0,0:00:11.95,0:00:15.38,Default,,0,0,0,,{\kf16}So {\kf56}instead {\kf14}I {\kf32}just {\kf56}replied {\kf64}normally {\kf80}suggesting {\kf24}she
+Dialogue: 0,0:00:15.38,0:00:18.43,Default,,0,0,0,,{\kf24}try {\kf24}her {\kf24}old {\kf48}place, {\kf24}her {\kf32}best {\kf56}friends {\kf72}literally
+Dialogue: 0,0:00:18.43,0:00:21.16,Default,,0,0,0,,{\kf32}live {\kf56}there,, {\kf16}or {\kf32}take {\kf24}the {\kf40}train {\kf40}since {\kf32}it’s
+Dialogue: 0,0:00:21.16,0:00:23.73,Default,,0,0,0,,{\kf24}not {\kf32}peak {\kf48}hours, {\kf16}or {\kf40}split {\kf24}cab {\kf32}plus {\kf40}train
+Dialogue: 0,0:00:23.73,0:00:25.90,Default,,0,0,0,,{\kf16}to {\kf32}save {\kf48}money. {\kf24}Now {\kf16}me {\kf24}and {\kf16}my {\kf40}other
+Dialogue: 0,0:00:25.90,0:00:29.19,Default,,0,0,0,,{\kf48}friend {\kf32}both {\kf56}noticed {\kf32}this {\kf56}pattern {\kf40}again {\kf24}she {\kf40}hints
+Dialogue: 0,0:00:29.19,0:00:32.40,Default,,0,0,0,,{\kf56}instead {\kf16}of {\kf56}asking, {\kf24}and {\kf56}expects {\kf48}people {\kf16}to {\kf48}offer.
+Dialogue: 0,0:00:32.79,0:00:35.21,Default,,0,0,0,,{\kf16}So {\kf16}Am {\kf14}I {\kf24}the {\kf56}asshole {\kf24}for {\kf24}not {\kf64}offering
+Dialogue: 0,0:00:35.21,0:00:37.78,Default,,0,0,0,,{\kf16}my {\kf40}place {\kf32}this {\kf40}time, {\kf32}even {\kf48}though {\kf14}I {\kf32}know
+Dialogue: 0,0:00:37.78,0:00:40.37,Default,,0,0,0,,{\kf40}she’s {\kf48}coming {\kf32}from {\kf24}far {\kf24}and {\kf40}it’ll {\kf16}be {\kf32}late
+Dialogue: 0,0:00:40.37,0:00:41.82,Default,,0,0,0,,{\kf16}at {\kf40}night {\kf16}in {\kf16}an {\kf56}outfit?

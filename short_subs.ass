@@ -8,15 +8,240 @@ ScaledBorderAndShadow: yes
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
-Style: Default,Arial,21,&H00FFFFFF,&H00FF00FF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,8,0,2,40,40,800,1
+Style: Default,Arial,65,&H00FFFFFF,&H00FF00FF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,8,0,2,40,40,800,1
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.00,0:00:24.55,Default,,0,0,0,,{\kf16}Am {\kf15}I {\kf25}the {\kf59}asshole {\kf25}for {\kf25}not {\kf42}going {\kf16}on {\kf50}family {\kf67}vacation {\kf50}unless {\kf15}I {\kf25}can {\kf42}share {\kf15}a {\kf25}bed {\kf33}with {\kf16}my {\kf67}fiancé?. {\kf16}My {\kf59}brother {\kf25}and {\kf15}I {\kf59}started {\kf67}planning {\kf15}a {\kf50}family {\kf75}vacation, {\kf42}first {\kf25}one {\kf42}since {\kf33}2019 {\kf33}that {\kf25}all {\kf25}the {\kf67}cousins, {\kf25}all {\kf59}adults. {\kf67}youngest {\kf16}is {\kf16}24 {\kf42}years {\kf33}old, {\kf25}can {\kf25}go. {\kf16}We {\kf33}used {\kf16}to {\kf33}rent {\kf15}a {\kf42}large {\kf42}beach {\kf42}house {\kf42}every {\kf42}year, {\kf16}so {\kf16}we {\kf33}were {\kf59}looking {\kf16}at {\kf42}large {\kf59}Airbnbs {\kf33}that {\kf42}sleep {\kf67}everyone {\kf25}and {\kf75}splitting {\kf50}costs.
-Dialogue: 0,0:00:24.94,0:00:43.29,Default,,0,0,0,,{\kf17}On {\kf26}the {\kf61}initial {\kf43}call, {\kf17}my {\kf26}mom {\kf34}said {\kf26}she {\kf61}prefers {\kf34}that {\kf17}my {\kf61}fiancé, {\kf34}27F, {\kf34}and, {\kf34}28F, {\kf26}not {\kf43}share {\kf15}a {\kf43}room. {\kf15}I {\kf34}told {\kf26}her {\kf34}that {\kf52}wasn’t {\kf43}going {\kf17}to {\kf61}happen. {\kf43}We’ve {\kf43}lived {\kf69}together {\kf26}for {\kf34}over {\kf26}two {\kf52}years, {\kf26}own {\kf15}a {\kf43}house {\kf78}together, {\kf26}and {\kf26}are {\kf61}getting {\kf61}married {\kf17}in {\kf15}6 {\kf61}months, {\kf15}3 {\kf17}by {\kf26}the {\kf34}time {\kf17}of {\kf26}the {\kf52}trip,.
-Dialogue: 0,0:00:43.69,0:01:01.50,Default,,0,0,0,,{\kf15}We {\kf31}even {\kf31}went {\kf15}on {\kf15}a {\kf47}family {\kf47}cruise {\kf31}last {\kf31}year {\kf23}and {\kf15}no {\kf23}one {\kf23}had {\kf23}any {\kf47}issues {\kf31}with {\kf15}us {\kf55}sharing {\kf15}a {\kf39}room. {\kf23}For {\kf15}a {\kf47}couple {\kf39}weeks {\kf39}after {\kf39}that, {\kf15}we {\kf31}sent {\kf47}airbnb {\kf55}options {\kf31}back {\kf23}and {\kf47}forth. {\kf15}No {\kf23}one {\kf55}brought {\kf15}up {\kf31}room {\kf95}arrangements {\kf47}again. {\kf31}Then {\kf47}today, {\kf15}my {\kf55}brother {\kf39}tells {\kf15}me {\kf31}that {\kf15}my {\kf23}mom {\kf23}had {\kf55}already {\kf47}booked {\kf15}a {\kf47}house.
-Dialogue: 0,0:01:01.89,0:01:21.82,Default,,0,0,0,,{\kf32}When {\kf15}I {\kf48}called {\kf32}her, {\kf24}she {\kf32}said {\kf16}my {\kf48}fiancé {\kf24}and {\kf15}I {\kf24}can {\kf48}either {\kf40}sleep {\kf16}in {\kf65}separate {\kf32}beds {\kf16}or {\kf32}find {\kf56}another {\kf40}place {\kf16}to {\kf40}stay. {\kf15}I {\kf40}asked {\kf24}her {\kf24}why {\kf24}she {\kf48}didn’t {\kf32}tell {\kf16}me {\kf65}earlier, {\kf24}and {\kf24}she {\kf32}said {\kf24}her {\kf65}original {\kf97}“preference” {\kf24}was {\kf24}her {\kf24}way {\kf16}of {\kf105}communicating {\kf40}that. {\kf15}I {\kf32}told {\kf24}her {\kf32}that {\kf48}wasn’t {\kf15}a {\kf40}rule, {\kf16}it {\kf24}was {\kf15}a {\kf89}preference, {\kf24}and {\kf15}I {\kf24}had {\kf24}set {\kf15}a {\kf73}boundary.
-Dialogue: 0,0:01:22.22,0:01:39.05,Default,,0,0,0,,{\kf23}She {\kf31}said {\kf38}since {\kf23}she {\kf46}booked {\kf23}the {\kf46}house, {\kf23}she {\kf23}can {\kf38}treat {\kf15}it {\kf31}like {\kf23}her {\kf38}house {\kf23}and {\kf23}set {\kf23}the {\kf46}rules. {\kf15}I {\kf54}pointed {\kf23}out {\kf31}that {\kf15}we {\kf31}were {\kf46}paying {\kf23}our {\kf46}share, {\kf54}dollars {\kf46}1200,, {\kf15}so {\kf23}she {\kf54}doesn’t {\kf23}get {\kf15}to {\kf54}control {\kf23}our {\kf62}sleeping {\kf101}arrangements. {\kf23}She {\kf31}said {\kf15}we {\kf23}can {\kf38}still {\kf31}pay, {\kf23}but {\kf15}we {\kf23}are {\kf23}not {\kf54}sharing {\kf15}a {\kf23}bed {\kf46}there.
-Dialogue: 0,0:01:39.45,0:02:02.70,Default,,0,0,0,,{\kf24}Now {\kf24}the {\kf64}cheapest {\kf48}option {\kf16}is {\kf15}a {\kf48}nearby {\kf48}hotel, {\kf56}dollars {\kf48}1500,, {\kf40}which {\kf40}means {\kf16}no {\kf56}kitchen {\kf24}and {\kf56}driving {\kf32}back {\kf24}and {\kf40}forth {\kf40}every {\kf32}day. {\kf48}That’s {\kf15}a {\kf81}completely {\kf81}different, {\kf24}and {\kf32}more {\kf81}expensive, {\kf64}vacation {\kf32}than {\kf32}what {\kf16}we {\kf48}agreed {\kf24}to. {\kf24}The {\kf32}only {\kf48}reason {\kf24}I’m {\kf32}even {\kf89}considering {\kf40}going {\kf16}is {\kf24}for {\kf16}my {\kf56}special {\kf40}needs {\kf64}brother, {\kf24}who {\kf16}is {\kf48}really {\kf56}excited {\kf40}about {\kf32}this {\kf40}trip. {\kf72}Otherwise {\kf24}I’d {\kf32}just {\kf32}skip {\kf24}it.
-Dialogue: 0,0:02:03.10,0:02:25.22,Default,,0,0,0,,{\kf15}My {\kf47}fiancé {\kf15}is {\kf55}willing {\kf15}to {\kf39}sleep {\kf79}separately {\kf23}for {\kf23}his {\kf39}sake, {\kf23}but {\kf23}I’m {\kf79}struggling {\kf47}giving {\kf23}in, {\kf79}especially {\kf39}since {\kf15}my {\kf55}parents {\kf39}don’t {\kf55}support {\kf23}our {\kf95}relationship {\kf23}and {\kf39}might {\kf23}not {\kf31}even {\kf31}come {\kf15}to {\kf23}our {\kf63}wedding. {\kf15}I {\kf31}feel {\kf39}stuck {\kf55}between {\kf47}paying {\kf31}more {\kf23}and {\kf47}giving {\kf15}in {\kf15}to {\kf15}my {\kf39}mom’s {\kf63}control. {\kf15}I {\kf31}know {\kf15}my {\kf31}dad, {\kf39}aunt, {\kf23}and {\kf55}grandma {\kf39}share {\kf23}the {\kf31}same {\kf55}beliefs {\kf15}as {\kf15}my {\kf23}mom {\kf15}so {\kf15}I {\kf31}feel {\kf39}alone {\kf15}in {\kf39}this.
-Dialogue: 0,0:02:25.62,0:02:30.25,Default,,0,0,0,,{\kf19}Am {\kf15}I {\kf28}the {\kf67}asshole {\kf19}if {\kf15}I {\kf57}refuse {\kf19}to {\kf19}go {\kf57}unless {\kf19}we {\kf28}can {\kf48}share {\kf15}a {\kf48}room?
+Dialogue: 0,0:00:00.00,0:00:01.37,Default,,0,0,0,,{\c&H00FF00FF}AITA{\c&H00FFFFFF} My dad wants me to co sign
+Dialogue: 0,0:00:01.37,0:00:01.54,Default,,0,0,0,,AITA {\c&H00FF00FF}My{\c&H00FFFFFF} dad wants me to co sign
+Dialogue: 0,0:00:01.54,0:00:01.80,Default,,0,0,0,,AITA My {\c&H00FF00FF}dad{\c&H00FFFFFF} wants me to co sign
+Dialogue: 0,0:00:01.80,0:00:02.23,Default,,0,0,0,,AITA My dad {\c&H00FF00FF}wants{\c&H00FFFFFF} me to co sign
+Dialogue: 0,0:00:02.23,0:00:02.40,Default,,0,0,0,,AITA My dad wants {\c&H00FF00FF}me{\c&H00FFFFFF} to co sign
+Dialogue: 0,0:00:02.40,0:00:02.57,Default,,0,0,0,,AITA My dad wants me {\c&H00FF00FF}to{\c&H00FFFFFF} co sign
+Dialogue: 0,0:00:02.57,0:00:02.75,Default,,0,0,0,,AITA My dad wants me to {\c&H00FF00FF}co{\c&H00FFFFFF} sign
+Dialogue: 0,0:00:02.75,0:00:03.09,Default,,0,0,0,,AITA My dad wants me to co {\c&H00FF00FF}sign{\c&H00FFFFFF}
+Dialogue: 0,0:00:03.09,0:00:03.24,Default,,0,0,0,,{\c&H00FF00FF}a{\c&H00FFFFFF} mortgage. I’m 32 female living at home.
+Dialogue: 0,0:00:03.24,0:00:04.01,Default,,0,0,0,,a {\c&H00FF00FF}mortgage.{\c&H00FFFFFF} I’m 32 female living at home.
+Dialogue: 0,0:00:04.01,0:00:04.27,Default,,0,0,0,,a mortgage. {\c&H00FF00FF}I’m{\c&H00FFFFFF} 32 female living at home.
+Dialogue: 0,0:00:04.27,0:00:04.44,Default,,0,0,0,,a mortgage. I’m {\c&H00FF00FF}32{\c&H00FFFFFF} female living at home.
+Dialogue: 0,0:00:04.44,0:00:04.96,Default,,0,0,0,,a mortgage. I’m 32 {\c&H00FF00FF}female{\c&H00FFFFFF} living at home.
+Dialogue: 0,0:00:04.96,0:00:05.47,Default,,0,0,0,,a mortgage. I’m 32 female {\c&H00FF00FF}living{\c&H00FFFFFF} at home.
+Dialogue: 0,0:00:05.47,0:00:05.64,Default,,0,0,0,,a mortgage. I’m 32 female living {\c&H00FF00FF}at{\c&H00FFFFFF} home.
+Dialogue: 0,0:00:05.64,0:00:06.07,Default,,0,0,0,,a mortgage. I’m 32 female living at {\c&H00FF00FF}home.{\c&H00FFFFFF}
+Dialogue: 0,0:00:06.07,0:00:06.25,Default,,0,0,0,,{\c&H00FF00FF}My{\c&H00FFFFFF} dad has always taken money from me
+Dialogue: 0,0:00:06.25,0:00:06.50,Default,,0,0,0,,My {\c&H00FF00FF}dad{\c&H00FFFFFF} has always taken money from me
+Dialogue: 0,0:00:06.50,0:00:06.76,Default,,0,0,0,,My dad {\c&H00FF00FF}has{\c&H00FFFFFF} always taken money from me
+Dialogue: 0,0:00:06.76,0:00:07.28,Default,,0,0,0,,My dad has {\c&H00FF00FF}always{\c&H00FFFFFF} taken money from me
+Dialogue: 0,0:00:07.28,0:00:07.71,Default,,0,0,0,,My dad has always {\c&H00FF00FF}taken{\c&H00FFFFFF} money from me
+Dialogue: 0,0:00:07.71,0:00:08.14,Default,,0,0,0,,My dad has always taken {\c&H00FF00FF}money{\c&H00FFFFFF} from me
+Dialogue: 0,0:00:08.14,0:00:08.48,Default,,0,0,0,,My dad has always taken money {\c&H00FF00FF}from{\c&H00FFFFFF} me
+Dialogue: 0,0:00:08.48,0:00:08.65,Default,,0,0,0,,My dad has always taken money from {\c&H00FF00FF}me{\c&H00FFFFFF}
+Dialogue: 0,0:00:08.65,0:00:09.08,Default,,0,0,0,,{\c&H00FF00FF}since{\c&H00FFFFFF} I was 13 and making 10 dollars
+Dialogue: 0,0:00:09.08,0:00:09.23,Default,,0,0,0,,since {\c&H00FF00FF}I{\c&H00FFFFFF} was 13 and making 10 dollars
+Dialogue: 0,0:00:09.23,0:00:09.49,Default,,0,0,0,,since I {\c&H00FF00FF}was{\c&H00FFFFFF} 13 and making 10 dollars
+Dialogue: 0,0:00:09.49,0:00:09.66,Default,,0,0,0,,since I was {\c&H00FF00FF}13{\c&H00FFFFFF} and making 10 dollars
+Dialogue: 0,0:00:09.66,0:00:09.92,Default,,0,0,0,,since I was 13 {\c&H00FF00FF}and{\c&H00FFFFFF} making 10 dollars
+Dialogue: 0,0:00:09.92,0:00:10.43,Default,,0,0,0,,since I was 13 and {\c&H00FF00FF}making{\c&H00FFFFFF} 10 dollars
+Dialogue: 0,0:00:10.43,0:00:10.61,Default,,0,0,0,,since I was 13 and making {\c&H00FF00FF}10{\c&H00FFFFFF} dollars
+Dialogue: 0,0:00:10.61,0:00:11.21,Default,,0,0,0,,since I was 13 and making 10 {\c&H00FF00FF}dollars{\c&H00FFFFFF}
+Dialogue: 0,0:00:11.21,0:00:11.38,Default,,0,0,0,,{\c&H00FF00FF}an{\c&H00FFFFFF} hour. I work a hospital job and
+Dialogue: 0,0:00:11.38,0:00:11.81,Default,,0,0,0,,an {\c&H00FF00FF}hour.{\c&H00FFFFFF} I work a hospital job and
+Dialogue: 0,0:00:11.81,0:00:11.96,Default,,0,0,0,,an hour. {\c&H00FF00FF}I{\c&H00FFFFFF} work a hospital job and
+Dialogue: 0,0:00:11.96,0:00:12.30,Default,,0,0,0,,an hour. I {\c&H00FF00FF}work{\c&H00FFFFFF} a hospital job and
+Dialogue: 0,0:00:12.30,0:00:12.45,Default,,0,0,0,,an hour. I work {\c&H00FF00FF}a{\c&H00FFFFFF} hospital job and
+Dialogue: 0,0:00:12.45,0:00:13.14,Default,,0,0,0,,an hour. I work a {\c&H00FF00FF}hospital{\c&H00FFFFFF} job and
+Dialogue: 0,0:00:13.14,0:00:13.39,Default,,0,0,0,,an hour. I work a hospital {\c&H00FF00FF}job{\c&H00FFFFFF} and
+Dialogue: 0,0:00:13.39,0:00:13.65,Default,,0,0,0,,an hour. I work a hospital job {\c&H00FF00FF}and{\c&H00FFFFFF}
+Dialogue: 0,0:00:13.65,0:00:13.99,Default,,0,0,0,,{\c&H00FF00FF}make{\c&H00FFFFFF} good money but I am saving for
+Dialogue: 0,0:00:13.99,0:00:14.34,Default,,0,0,0,,make {\c&H00FF00FF}good{\c&H00FFFFFF} money but I am saving for
+Dialogue: 0,0:00:14.34,0:00:14.77,Default,,0,0,0,,make good {\c&H00FF00FF}money{\c&H00FFFFFF} but I am saving for
+Dialogue: 0,0:00:14.77,0:00:15.03,Default,,0,0,0,,make good money {\c&H00FF00FF}but{\c&H00FFFFFF} I am saving for
+Dialogue: 0,0:00:15.03,0:00:15.17,Default,,0,0,0,,make good money but {\c&H00FF00FF}I{\c&H00FFFFFF} am saving for
+Dialogue: 0,0:00:15.17,0:00:15.35,Default,,0,0,0,,make good money but I {\c&H00FF00FF}am{\c&H00FFFFFF} saving for
+Dialogue: 0,0:00:15.35,0:00:15.86,Default,,0,0,0,,make good money but I am {\c&H00FF00FF}saving{\c&H00FFFFFF} for
+Dialogue: 0,0:00:15.86,0:00:16.12,Default,,0,0,0,,make good money but I am saving {\c&H00FF00FF}for{\c&H00FFFFFF}
+Dialogue: 0,0:00:16.12,0:00:16.29,Default,,0,0,0,,{\c&H00FF00FF}my{\c&H00FFFFFF} own home one day and other investments.
+Dialogue: 0,0:00:16.29,0:00:16.55,Default,,0,0,0,,my {\c&H00FF00FF}own{\c&H00FFFFFF} home one day and other investments.
+Dialogue: 0,0:00:16.55,0:00:16.89,Default,,0,0,0,,my own {\c&H00FF00FF}home{\c&H00FFFFFF} one day and other investments.
+Dialogue: 0,0:00:16.89,0:00:17.15,Default,,0,0,0,,my own home {\c&H00FF00FF}one{\c&H00FFFFFF} day and other investments.
+Dialogue: 0,0:00:17.15,0:00:17.41,Default,,0,0,0,,my own home one {\c&H00FF00FF}day{\c&H00FFFFFF} and other investments.
+Dialogue: 0,0:00:17.41,0:00:17.67,Default,,0,0,0,,my own home one day {\c&H00FF00FF}and{\c&H00FFFFFF} other investments.
+Dialogue: 0,0:00:17.67,0:00:18.10,Default,,0,0,0,,my own home one day and {\c&H00FF00FF}other{\c&H00FFFFFF} investments.
+Dialogue: 0,0:00:18.10,0:00:19.13,Default,,0,0,0,,my own home one day and other {\c&H00FF00FF}investments.{\c&H00FFFFFF}
+Dialogue: 0,0:00:19.13,0:00:19.30,Default,,0,0,0,,{\c&H00FF00FF}My{\c&H00FFFFFF} dad thinks I’ll never own a home
+Dialogue: 0,0:00:19.30,0:00:19.56,Default,,0,0,0,,My {\c&H00FF00FF}dad{\c&H00FFFFFF} thinks I’ll never own a home
+Dialogue: 0,0:00:19.56,0:00:20.07,Default,,0,0,0,,My dad {\c&H00FF00FF}thinks{\c&H00FFFFFF} I’ll never own a home
+Dialogue: 0,0:00:20.07,0:00:20.42,Default,,0,0,0,,My dad thinks {\c&H00FF00FF}I’ll{\c&H00FFFFFF} never own a home
+Dialogue: 0,0:00:20.42,0:00:20.85,Default,,0,0,0,,My dad thinks I’ll {\c&H00FF00FF}never{\c&H00FFFFFF} own a home
+Dialogue: 0,0:00:20.85,0:00:21.11,Default,,0,0,0,,My dad thinks I’ll never {\c&H00FF00FF}own{\c&H00FFFFFF} a home
+Dialogue: 0,0:00:21.11,0:00:21.25,Default,,0,0,0,,My dad thinks I’ll never own {\c&H00FF00FF}a{\c&H00FFFFFF} home
+Dialogue: 0,0:00:21.25,0:00:21.60,Default,,0,0,0,,My dad thinks I’ll never own a {\c&H00FF00FF}home{\c&H00FFFFFF}
+Dialogue: 0,0:00:21.60,0:00:21.77,Default,,0,0,0,,{\c&H00FF00FF}in{\c&H00FFFFFF} my life.
+Dialogue: 0,0:00:21.77,0:00:21.94,Default,,0,0,0,,in {\c&H00FF00FF}my{\c&H00FFFFFF} life.
+Dialogue: 0,0:00:21.94,0:00:22.37,Default,,0,0,0,,in my {\c&H00FF00FF}life.{\c&H00FFFFFF}
+Dialogue: 0,0:00:22.77,0:00:23.23,Default,,0,0,0,,{\c&H00FF00FF}Every{\c&H00FFFFFF} six months he will find a house
+Dialogue: 0,0:00:23.23,0:00:23.50,Default,,0,0,0,,Every {\c&H00FF00FF}six{\c&H00FFFFFF} months he will find a house
+Dialogue: 0,0:00:23.50,0:00:24.05,Default,,0,0,0,,Every six {\c&H00FF00FF}months{\c&H00FFFFFF} he will find a house
+Dialogue: 0,0:00:24.05,0:00:24.23,Default,,0,0,0,,Every six months {\c&H00FF00FF}he{\c&H00FFFFFF} will find a house
+Dialogue: 0,0:00:24.23,0:00:24.59,Default,,0,0,0,,Every six months he {\c&H00FF00FF}will{\c&H00FFFFFF} find a house
+Dialogue: 0,0:00:24.59,0:00:24.96,Default,,0,0,0,,Every six months he will {\c&H00FF00FF}find{\c&H00FFFFFF} a house
+Dialogue: 0,0:00:24.96,0:00:25.11,Default,,0,0,0,,Every six months he will find {\c&H00FF00FF}a{\c&H00FFFFFF} house
+Dialogue: 0,0:00:25.11,0:00:25.56,Default,,0,0,0,,Every six months he will find a {\c&H00FF00FF}house{\c&H00FFFFFF}
+Dialogue: 0,0:00:25.56,0:00:25.93,Default,,0,0,0,,{\c&H00FF00FF}that{\c&H00FFFFFF} he thinks is a steal, it’s not,
+Dialogue: 0,0:00:25.93,0:00:26.11,Default,,0,0,0,,that {\c&H00FF00FF}he{\c&H00FFFFFF} thinks is a steal, it’s not,
+Dialogue: 0,0:00:26.11,0:00:26.66,Default,,0,0,0,,that he {\c&H00FF00FF}thinks{\c&H00FFFFFF} is a steal, it’s not,
+Dialogue: 0,0:00:26.66,0:00:26.84,Default,,0,0,0,,that he thinks {\c&H00FF00FF}is{\c&H00FFFFFF} a steal, it’s not,
+Dialogue: 0,0:00:26.84,0:00:26.99,Default,,0,0,0,,that he thinks is {\c&H00FF00FF}a{\c&H00FFFFFF} steal, it’s not,
+Dialogue: 0,0:00:26.99,0:00:27.54,Default,,0,0,0,,that he thinks is a {\c&H00FF00FF}steal,{\c&H00FFFFFF} it’s not,
+Dialogue: 0,0:00:27.54,0:00:27.90,Default,,0,0,0,,that he thinks is a steal, {\c&H00FF00FF}it’s{\c&H00FFFFFF} not,
+Dialogue: 0,0:00:27.90,0:00:28.27,Default,,0,0,0,,that he thinks is a steal, it’s {\c&H00FF00FF}not,{\c&H00FFFFFF}
+Dialogue: 0,0:00:28.27,0:00:28.54,Default,,0,0,0,,{\c&H00FF00FF}and{\c&H00FFFFFF} ask me to co sign a loan
+Dialogue: 0,0:00:28.54,0:00:28.81,Default,,0,0,0,,and {\c&H00FF00FF}ask{\c&H00FFFFFF} me to co sign a loan
+Dialogue: 0,0:00:28.81,0:00:28.99,Default,,0,0,0,,and ask {\c&H00FF00FF}me{\c&H00FFFFFF} to co sign a loan
+Dialogue: 0,0:00:28.99,0:00:29.18,Default,,0,0,0,,and ask me {\c&H00FF00FF}to{\c&H00FFFFFF} co sign a loan
+Dialogue: 0,0:00:29.18,0:00:29.36,Default,,0,0,0,,and ask me to {\c&H00FF00FF}co{\c&H00FFFFFF} sign a loan
+Dialogue: 0,0:00:29.36,0:00:29.72,Default,,0,0,0,,and ask me to co {\c&H00FF00FF}sign{\c&H00FFFFFF} a loan
+Dialogue: 0,0:00:29.72,0:00:29.87,Default,,0,0,0,,and ask me to co sign {\c&H00FF00FF}a{\c&H00FFFFFF} loan
+Dialogue: 0,0:00:29.87,0:00:30.24,Default,,0,0,0,,and ask me to co sign a {\c&H00FF00FF}loan{\c&H00FFFFFF}
+Dialogue: 0,0:00:30.24,0:00:30.60,Default,,0,0,0,,{\c&H00FF00FF}with{\c&H00FFFFFF} him and I always say no and
+Dialogue: 0,0:00:30.60,0:00:30.88,Default,,0,0,0,,with {\c&H00FF00FF}him{\c&H00FFFFFF} and I always say no and
+Dialogue: 0,0:00:30.88,0:00:31.15,Default,,0,0,0,,with him {\c&H00FF00FF}and{\c&H00FFFFFF} I always say no and
+Dialogue: 0,0:00:31.15,0:00:31.30,Default,,0,0,0,,with him and {\c&H00FF00FF}I{\c&H00FFFFFF} always say no and
+Dialogue: 0,0:00:31.30,0:00:31.84,Default,,0,0,0,,with him and I {\c&H00FF00FF}always{\c&H00FFFFFF} say no and
+Dialogue: 0,0:00:31.84,0:00:32.12,Default,,0,0,0,,with him and I always {\c&H00FF00FF}say{\c&H00FFFFFF} no and
+Dialogue: 0,0:00:32.12,0:00:32.30,Default,,0,0,0,,with him and I always say {\c&H00FF00FF}no{\c&H00FFFFFF} and
+Dialogue: 0,0:00:32.30,0:00:32.57,Default,,0,0,0,,with him and I always say no {\c&H00FF00FF}and{\c&H00FFFFFF}
+Dialogue: 0,0:00:32.57,0:00:32.76,Default,,0,0,0,,{\c&H00FF00FF}he{\c&H00FFFFFF} basically tells me to go eff myself.
+Dialogue: 0,0:00:32.76,0:00:33.58,Default,,0,0,0,,he {\c&H00FF00FF}basically{\c&H00FFFFFF} tells me to go eff myself.
+Dialogue: 0,0:00:33.58,0:00:34.03,Default,,0,0,0,,he basically {\c&H00FF00FF}tells{\c&H00FFFFFF} me to go eff myself.
+Dialogue: 0,0:00:34.03,0:00:34.22,Default,,0,0,0,,he basically tells {\c&H00FF00FF}me{\c&H00FFFFFF} to go eff myself.
+Dialogue: 0,0:00:34.22,0:00:34.40,Default,,0,0,0,,he basically tells me {\c&H00FF00FF}to{\c&H00FFFFFF} go eff myself.
+Dialogue: 0,0:00:34.40,0:00:34.58,Default,,0,0,0,,he basically tells me to {\c&H00FF00FF}go{\c&H00FFFFFF} eff myself.
+Dialogue: 0,0:00:34.58,0:00:34.86,Default,,0,0,0,,he basically tells me to go {\c&H00FF00FF}eff{\c&H00FFFFFF} myself.
+Dialogue: 0,0:00:34.86,0:00:35.49,Default,,0,0,0,,he basically tells me to go eff {\c&H00FF00FF}myself.{\c&H00FFFFFF}
+Dialogue: 0,0:00:35.49,0:00:35.86,Default,,0,0,0,,{\c&H00FF00FF}Well{\c&H00FFFFFF} my mom is getting an 85k payout
+Dialogue: 0,0:00:35.86,0:00:36.04,Default,,0,0,0,,Well {\c&H00FF00FF}my{\c&H00FFFFFF} mom is getting an 85k payout
+Dialogue: 0,0:00:36.04,0:00:36.31,Default,,0,0,0,,Well my {\c&H00FF00FF}mom{\c&H00FFFFFF} is getting an 85k payout
+Dialogue: 0,0:00:36.31,0:00:36.50,Default,,0,0,0,,Well my mom {\c&H00FF00FF}is{\c&H00FFFFFF} getting an 85k payout
+Dialogue: 0,0:00:36.50,0:00:37.14,Default,,0,0,0,,Well my mom is {\c&H00FF00FF}getting{\c&H00FFFFFF} an 85k payout
+Dialogue: 0,0:00:37.14,0:00:37.32,Default,,0,0,0,,Well my mom is getting {\c&H00FF00FF}an{\c&H00FFFFFF} 85k payout
+Dialogue: 0,0:00:37.32,0:00:37.59,Default,,0,0,0,,Well my mom is getting an {\c&H00FF00FF}85k{\c&H00FFFFFF} payout
+Dialogue: 0,0:00:37.59,0:00:38.14,Default,,0,0,0,,Well my mom is getting an 85k {\c&H00FF00FF}payout{\c&H00FFFFFF}
+Dialogue: 0,0:00:38.14,0:00:38.59,Default,,0,0,0,,{\c&H00FF00FF}soon.{\c&H00FFFFFF}
+Dialogue: 0,0:00:38.99,0:00:39.14,Default,,0,0,0,,{\c&H00FF00FF}I{\c&H00FFFFFF} saw this coming but yes yet again
+Dialogue: 0,0:00:39.14,0:00:39.37,Default,,0,0,0,,I {\c&H00FF00FF}saw{\c&H00FFFFFF} this coming but yes yet again
+Dialogue: 0,0:00:39.37,0:00:39.66,Default,,0,0,0,,I saw {\c&H00FF00FF}this{\c&H00FFFFFF} coming but yes yet again
+Dialogue: 0,0:00:39.66,0:00:40.11,Default,,0,0,0,,I saw this {\c&H00FF00FF}coming{\c&H00FFFFFF} but yes yet again
+Dialogue: 0,0:00:40.11,0:00:40.34,Default,,0,0,0,,I saw this coming {\c&H00FF00FF}but{\c&H00FFFFFF} yes yet again
+Dialogue: 0,0:00:40.34,0:00:40.56,Default,,0,0,0,,I saw this coming but {\c&H00FF00FF}yes{\c&H00FFFFFF} yet again
+Dialogue: 0,0:00:40.56,0:00:40.79,Default,,0,0,0,,I saw this coming but yes {\c&H00FF00FF}yet{\c&H00FFFFFF} again
+Dialogue: 0,0:00:40.79,0:00:41.16,Default,,0,0,0,,I saw this coming but yes yet {\c&H00FF00FF}again{\c&H00FFFFFF}
+Dialogue: 0,0:00:41.16,0:00:41.31,Default,,0,0,0,,{\c&H00FF00FF}my{\c&H00FFFFFF} dad tells me I need to co
+Dialogue: 0,0:00:41.31,0:00:41.53,Default,,0,0,0,,my {\c&H00FF00FF}dad{\c&H00FFFFFF} tells me I need to co
+Dialogue: 0,0:00:41.53,0:00:41.91,Default,,0,0,0,,my dad {\c&H00FF00FF}tells{\c&H00FFFFFF} me I need to co
+Dialogue: 0,0:00:41.91,0:00:42.06,Default,,0,0,0,,my dad tells {\c&H00FF00FF}me{\c&H00FFFFFF} I need to co
+Dialogue: 0,0:00:42.06,0:00:42.20,Default,,0,0,0,,my dad tells me {\c&H00FF00FF}I{\c&H00FFFFFF} need to co
+Dialogue: 0,0:00:42.20,0:00:42.50,Default,,0,0,0,,my dad tells me I {\c&H00FF00FF}need{\c&H00FFFFFF} to co
+Dialogue: 0,0:00:42.50,0:00:42.65,Default,,0,0,0,,my dad tells me I need {\c&H00FF00FF}to{\c&H00FFFFFF} co
+Dialogue: 0,0:00:42.65,0:00:42.80,Default,,0,0,0,,my dad tells me I need to {\c&H00FF00FF}co{\c&H00FFFFFF}
+Dialogue: 0,0:00:42.80,0:00:43.10,Default,,0,0,0,,{\c&H00FF00FF}sign{\c&H00FFFFFF} a mortgage with him so they can
+Dialogue: 0,0:00:43.10,0:00:43.25,Default,,0,0,0,,sign {\c&H00FF00FF}a{\c&H00FFFFFF} mortgage with him so they can
+Dialogue: 0,0:00:43.25,0:00:43.84,Default,,0,0,0,,sign a {\c&H00FF00FF}mortgage{\c&H00FFFFFF} with him so they can
+Dialogue: 0,0:00:43.84,0:00:44.14,Default,,0,0,0,,sign a mortgage {\c&H00FF00FF}with{\c&H00FFFFFF} him so they can
+Dialogue: 0,0:00:44.14,0:00:44.37,Default,,0,0,0,,sign a mortgage with {\c&H00FF00FF}him{\c&H00FFFFFF} so they can
+Dialogue: 0,0:00:44.37,0:00:45.64,Default,,0,0,0,,sign a mortgage with him {\c&H00FF00FF}so{\c&H00FFFFFF} they can
+Dialogue: 0,0:00:45.64,0:00:45.94,Default,,0,0,0,,sign a mortgage with him so {\c&H00FF00FF}they{\c&H00FFFFFF} can
+Dialogue: 0,0:00:45.94,0:00:46.16,Default,,0,0,0,,sign a mortgage with him so they {\c&H00FF00FF}can{\c&H00FFFFFF}
+Dialogue: 0,0:00:46.16,0:00:46.61,Default,,0,0,0,,{\c&H00FF00FF}invest{\c&H00FFFFFF} this money into a house and it
+Dialogue: 0,0:00:46.61,0:00:46.91,Default,,0,0,0,,invest {\c&H00FF00FF}this{\c&H00FFFFFF} money into a house and it
+Dialogue: 0,0:00:46.91,0:00:47.28,Default,,0,0,0,,invest this {\c&H00FF00FF}money{\c&H00FFFFFF} into a house and it
+Dialogue: 0,0:00:47.28,0:00:47.58,Default,,0,0,0,,invest this money {\c&H00FF00FF}into{\c&H00FFFFFF} a house and it
+Dialogue: 0,0:00:47.58,0:00:47.73,Default,,0,0,0,,invest this money into {\c&H00FF00FF}a{\c&H00FFFFFF} house and it
+Dialogue: 0,0:00:47.73,0:00:48.10,Default,,0,0,0,,invest this money into a {\c&H00FF00FF}house{\c&H00FFFFFF} and it
+Dialogue: 0,0:00:48.10,0:00:48.32,Default,,0,0,0,,invest this money into a house {\c&H00FF00FF}and{\c&H00FFFFFF} it
+Dialogue: 0,0:00:48.32,0:00:48.47,Default,,0,0,0,,invest this money into a house and {\c&H00FF00FF}it{\c&H00FFFFFF}
+Dialogue: 0,0:00:48.47,0:00:48.85,Default,,0,0,0,,{\c&H00FF00FF}ended{\c&H00FFFFFF} up in a huge argument. In the
+Dialogue: 0,0:00:48.85,0:00:49.00,Default,,0,0,0,,ended {\c&H00FF00FF}up{\c&H00FFFFFF} in a huge argument. In the
+Dialogue: 0,0:00:49.00,0:00:49.15,Default,,0,0,0,,ended up {\c&H00FF00FF}in{\c&H00FFFFFF} a huge argument. In the
+Dialogue: 0,0:00:49.15,0:00:49.29,Default,,0,0,0,,ended up in {\c&H00FF00FF}a{\c&H00FFFFFF} huge argument. In the
+Dialogue: 0,0:00:49.29,0:00:49.59,Default,,0,0,0,,ended up in a {\c&H00FF00FF}huge{\c&H00FFFFFF} argument. In the
+Dialogue: 0,0:00:49.59,0:00:50.26,Default,,0,0,0,,ended up in a huge {\c&H00FF00FF}argument.{\c&H00FFFFFF} In the
+Dialogue: 0,0:00:50.26,0:00:50.41,Default,,0,0,0,,ended up in a huge argument. {\c&H00FF00FF}In{\c&H00FFFFFF} the
+Dialogue: 0,0:00:50.41,0:00:50.64,Default,,0,0,0,,ended up in a huge argument. In {\c&H00FF00FF}the{\c&H00FFFFFF}
+Dialogue: 0,0:00:50.64,0:00:50.86,Default,,0,0,0,,{\c&H00FF00FF}end{\c&H00FFFFFF} he said you’re lucky I don’t spit
+Dialogue: 0,0:00:50.86,0:00:51.01,Default,,0,0,0,,end {\c&H00FF00FF}he{\c&H00FFFFFF} said you’re lucky I don’t spit
+Dialogue: 0,0:00:51.01,0:00:51.31,Default,,0,0,0,,end he {\c&H00FF00FF}said{\c&H00FFFFFF} you’re lucky I don’t spit
+Dialogue: 0,0:00:51.31,0:00:51.76,Default,,0,0,0,,end he said {\c&H00FF00FF}you’re{\c&H00FFFFFF} lucky I don’t spit
+Dialogue: 0,0:00:51.76,0:00:52.13,Default,,0,0,0,,end he said you’re {\c&H00FF00FF}lucky{\c&H00FFFFFF} I don’t spit
+Dialogue: 0,0:00:52.13,0:00:52.28,Default,,0,0,0,,end he said you’re lucky {\c&H00FF00FF}I{\c&H00FFFFFF} don’t spit
+Dialogue: 0,0:00:52.28,0:00:52.65,Default,,0,0,0,,end he said you’re lucky I {\c&H00FF00FF}don’t{\c&H00FFFFFF} spit
+Dialogue: 0,0:00:52.65,0:00:52.95,Default,,0,0,0,,end he said you’re lucky I don’t {\c&H00FF00FF}spit{\c&H00FFFFFF}
+Dialogue: 0,0:00:52.95,0:00:53.10,Default,,0,0,0,,{\c&H00FF00FF}in{\c&H00FFFFFF} your face you ungrateful bitch. I stayed
+Dialogue: 0,0:00:53.10,0:00:53.40,Default,,0,0,0,,in {\c&H00FF00FF}your{\c&H00FFFFFF} face you ungrateful bitch. I stayed
+Dialogue: 0,0:00:53.40,0:00:53.70,Default,,0,0,0,,in your {\c&H00FF00FF}face{\c&H00FFFFFF} you ungrateful bitch. I stayed
+Dialogue: 0,0:00:53.70,0:00:53.92,Default,,0,0,0,,in your face {\c&H00FF00FF}you{\c&H00FFFFFF} ungrateful bitch. I stayed
+Dialogue: 0,0:00:53.92,0:00:54.67,Default,,0,0,0,,in your face you {\c&H00FF00FF}ungrateful{\c&H00FFFFFF} bitch. I stayed
+Dialogue: 0,0:00:54.67,0:00:55.12,Default,,0,0,0,,in your face you ungrateful {\c&H00FF00FF}bitch.{\c&H00FFFFFF} I stayed
+Dialogue: 0,0:00:55.12,0:00:55.26,Default,,0,0,0,,in your face you ungrateful bitch. {\c&H00FF00FF}I{\c&H00FFFFFF} stayed
+Dialogue: 0,0:00:55.26,0:00:55.71,Default,,0,0,0,,in your face you ungrateful bitch. I {\c&H00FF00FF}stayed{\c&H00FFFFFF}
+Dialogue: 0,0:00:55.71,0:00:55.86,Default,,0,0,0,,{\c&H00FF00FF}up{\c&H00FFFFFF} all night stressed out and having palpitations
+Dialogue: 0,0:00:55.86,0:00:56.09,Default,,0,0,0,,up {\c&H00FF00FF}all{\c&H00FFFFFF} night stressed out and having palpitations
+Dialogue: 0,0:00:56.09,0:00:56.46,Default,,0,0,0,,up all {\c&H00FF00FF}night{\c&H00FFFFFF} stressed out and having palpitations
+Dialogue: 0,0:00:56.46,0:00:57.06,Default,,0,0,0,,up all night {\c&H00FF00FF}stressed{\c&H00FFFFFF} out and having palpitations
+Dialogue: 0,0:00:57.06,0:00:57.28,Default,,0,0,0,,up all night stressed {\c&H00FF00FF}out{\c&H00FFFFFF} and having palpitations
+Dialogue: 0,0:00:57.28,0:00:57.51,Default,,0,0,0,,up all night stressed out {\c&H00FF00FF}and{\c&H00FFFFFF} having palpitations
+Dialogue: 0,0:00:57.51,0:00:57.95,Default,,0,0,0,,up all night stressed out and {\c&H00FF00FF}having{\c&H00FFFFFF} palpitations
+Dialogue: 0,0:00:57.95,0:00:58.85,Default,,0,0,0,,up all night stressed out and having {\c&H00FF00FF}palpitations{\c&H00FFFFFF}
+Dialogue: 0,0:00:58.85,0:00:59.00,Default,,0,0,0,,{\c&H00FF00FF}at{\c&H00FFFFFF} work this morning.
+Dialogue: 0,0:00:59.00,0:00:59.30,Default,,0,0,0,,at {\c&H00FF00FF}work{\c&H00FFFFFF} this morning.
+Dialogue: 0,0:00:59.30,0:00:59.60,Default,,0,0,0,,at work {\c&H00FF00FF}this{\c&H00FFFFFF} morning.
+Dialogue: 0,0:00:59.60,0:01:00.19,Default,,0,0,0,,at work this {\c&H00FF00FF}morning.{\c&H00FFFFFF}
+Dialogue: 0,0:01:00.59,0:01:00.74,Default,,0,0,0,,{\c&H00FF00FF}I{\c&H00FFFFFF} don’t think it’s right he is asking
+Dialogue: 0,0:01:00.74,0:01:01.13,Default,,0,0,0,,I {\c&H00FF00FF}don’t{\c&H00FFFFFF} think it’s right he is asking
+Dialogue: 0,0:01:01.13,0:01:01.51,Default,,0,0,0,,I don’t {\c&H00FF00FF}think{\c&H00FFFFFF} it’s right he is asking
+Dialogue: 0,0:01:01.51,0:01:01.82,Default,,0,0,0,,I don’t think {\c&H00FF00FF}it’s{\c&H00FFFFFF} right he is asking
+Dialogue: 0,0:01:01.82,0:01:02.21,Default,,0,0,0,,I don’t think it’s {\c&H00FF00FF}right{\c&H00FFFFFF} he is asking
+Dialogue: 0,0:01:02.21,0:01:02.36,Default,,0,0,0,,I don’t think it’s right {\c&H00FF00FF}he{\c&H00FFFFFF} is asking
+Dialogue: 0,0:01:02.36,0:01:02.51,Default,,0,0,0,,I don’t think it’s right he {\c&H00FF00FF}is{\c&H00FFFFFF} asking
+Dialogue: 0,0:01:02.51,0:01:02.97,Default,,0,0,0,,I don’t think it’s right he is {\c&H00FF00FF}asking{\c&H00FFFFFF}
+Dialogue: 0,0:01:02.97,0:01:03.13,Default,,0,0,0,,{\c&H00FF00FF}me{\c&H00FFFFFF} to basically put 500 k under my
+Dialogue: 0,0:01:03.13,0:01:03.28,Default,,0,0,0,,me {\c&H00FF00FF}to{\c&H00FFFFFF} basically put 500 k under my
+Dialogue: 0,0:01:03.28,0:01:03.97,Default,,0,0,0,,me to {\c&H00FF00FF}basically{\c&H00FFFFFF} put 500 k under my
+Dialogue: 0,0:01:03.97,0:01:04.21,Default,,0,0,0,,me to basically {\c&H00FF00FF}put{\c&H00FFFFFF} 500 k under my
+Dialogue: 0,0:01:04.21,0:01:04.44,Default,,0,0,0,,me to basically put {\c&H00FF00FF}500{\c&H00FFFFFF} k under my
+Dialogue: 0,0:01:04.44,0:01:04.59,Default,,0,0,0,,me to basically put 500 {\c&H00FF00FF}k{\c&H00FFFFFF} under my
+Dialogue: 0,0:01:04.59,0:01:04.97,Default,,0,0,0,,me to basically put 500 k {\c&H00FF00FF}under{\c&H00FFFFFF} my
+Dialogue: 0,0:01:04.97,0:01:05.12,Default,,0,0,0,,me to basically put 500 k under {\c&H00FF00FF}my{\c&H00FFFFFF}
+Dialogue: 0,0:01:05.12,0:01:05.51,Default,,0,0,0,,{\c&H00FF00FF}name.{\c&H00FFFFFF} Then saying something like that to me
+Dialogue: 0,0:01:05.51,0:01:05.82,Default,,0,0,0,,name. {\c&H00FF00FF}Then{\c&H00FFFFFF} saying something like that to me
+Dialogue: 0,0:01:05.82,0:01:06.28,Default,,0,0,0,,name. Then {\c&H00FF00FF}saying{\c&H00FFFFFF} something like that to me
+Dialogue: 0,0:01:06.28,0:01:06.97,Default,,0,0,0,,name. Then saying {\c&H00FF00FF}something{\c&H00FFFFFF} like that to me
+Dialogue: 0,0:01:06.97,0:01:07.28,Default,,0,0,0,,name. Then saying something {\c&H00FF00FF}like{\c&H00FFFFFF} that to me
+Dialogue: 0,0:01:07.28,0:01:07.59,Default,,0,0,0,,name. Then saying something like {\c&H00FF00FF}that{\c&H00FFFFFF} to me
+Dialogue: 0,0:01:07.59,0:01:07.74,Default,,0,0,0,,name. Then saying something like that {\c&H00FF00FF}to{\c&H00FFFFFF} me
+Dialogue: 0,0:01:07.74,0:01:07.89,Default,,0,0,0,,name. Then saying something like that to {\c&H00FF00FF}me{\c&H00FFFFFF}
+Dialogue: 0,0:01:07.89,0:01:08.12,Default,,0,0,0,,{\c&H00FF00FF}for{\c&H00FFFFFF} saying no to something that would be
+Dialogue: 0,0:01:08.12,0:01:08.59,Default,,0,0,0,,for {\c&H00FF00FF}saying{\c&H00FFFFFF} no to something that would be
+Dialogue: 0,0:01:08.59,0:01:08.74,Default,,0,0,0,,for saying {\c&H00FF00FF}no{\c&H00FFFFFF} to something that would be
+Dialogue: 0,0:01:08.74,0:01:08.89,Default,,0,0,0,,for saying no {\c&H00FF00FF}to{\c&H00FFFFFF} something that would be
+Dialogue: 0,0:01:08.89,0:01:09.59,Default,,0,0,0,,for saying no to {\c&H00FF00FF}something{\c&H00FFFFFF} that would be
+Dialogue: 0,0:01:09.59,0:01:09.89,Default,,0,0,0,,for saying no to something {\c&H00FF00FF}that{\c&H00FFFFFF} would be
+Dialogue: 0,0:01:09.89,0:01:10.28,Default,,0,0,0,,for saying no to something that {\c&H00FF00FF}would{\c&H00FFFFFF} be
+Dialogue: 0,0:01:10.28,0:01:10.43,Default,,0,0,0,,for saying no to something that would {\c&H00FF00FF}be{\c&H00FFFFFF}
+Dialogue: 0,0:01:10.43,0:01:11.28,Default,,0,0,0,,{\c&H00FF00FF}financially{\c&H00FFFFFF} detrimental to me. AITA? What do you
+Dialogue: 0,0:01:11.28,0:01:12.12,Default,,0,0,0,,financially {\c&H00FF00FF}detrimental{\c&H00FFFFFF} to me. AITA? What do you
+Dialogue: 0,0:01:12.12,0:01:12.28,Default,,0,0,0,,financially detrimental {\c&H00FF00FF}to{\c&H00FFFFFF} me. AITA? What do you
+Dialogue: 0,0:01:12.28,0:01:12.51,Default,,0,0,0,,financially detrimental to {\c&H00FF00FF}me.{\c&H00FFFFFF} AITA? What do you
+Dialogue: 0,0:01:12.51,0:01:13.74,Default,,0,0,0,,financially detrimental to me. {\c&H00FF00FF}AITA?{\c&H00FFFFFF} What do you
+Dialogue: 0,0:01:13.74,0:01:14.05,Default,,0,0,0,,financially detrimental to me. AITA? {\c&H00FF00FF}What{\c&H00FFFFFF} do you
+Dialogue: 0,0:01:14.05,0:01:14.20,Default,,0,0,0,,financially detrimental to me. AITA? What {\c&H00FF00FF}do{\c&H00FFFFFF} you
+Dialogue: 0,0:01:14.20,0:01:14.43,Default,,0,0,0,,financially detrimental to me. AITA? What do {\c&H00FF00FF}you{\c&H00FFFFFF}
+Dialogue: 0,0:01:14.43,0:01:14.74,Default,,0,0,0,,{\c&H00FF00FF}guys{\c&H00FFFFFF} think would you do it for your
+Dialogue: 0,0:01:14.74,0:01:15.13,Default,,0,0,0,,guys {\c&H00FF00FF}think{\c&H00FFFFFF} would you do it for your
+Dialogue: 0,0:01:15.13,0:01:15.51,Default,,0,0,0,,guys think {\c&H00FF00FF}would{\c&H00FFFFFF} you do it for your
+Dialogue: 0,0:01:15.51,0:01:15.74,Default,,0,0,0,,guys think would {\c&H00FF00FF}you{\c&H00FFFFFF} do it for your
+Dialogue: 0,0:01:15.74,0:01:15.89,Default,,0,0,0,,guys think would you {\c&H00FF00FF}do{\c&H00FFFFFF} it for your
+Dialogue: 0,0:01:15.89,0:01:16.05,Default,,0,0,0,,guys think would you do {\c&H00FF00FF}it{\c&H00FFFFFF} for your
+Dialogue: 0,0:01:16.05,0:01:16.28,Default,,0,0,0,,guys think would you do it {\c&H00FF00FF}for{\c&H00FFFFFF} your
+Dialogue: 0,0:01:16.28,0:01:16.59,Default,,0,0,0,,guys think would you do it for {\c&H00FF00FF}your{\c&H00FFFFFF}
+Dialogue: 0,0:01:16.59,0:01:16.89,Default,,0,0,0,,{\c&H00FF00FF}dad?{\c&H00FFFFFF}

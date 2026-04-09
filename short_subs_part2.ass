@@ -1,0 +1,34 @@
+[Script Info]
+Title: Karaoke Subtitles Smooth
+ScriptType: v4.00+
+WrapStyle: 1
+PlayResX: 1080
+PlayResY: 1920
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,65,&H00FF00FF,&H00FFFFFF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,8,0,2,40,40,800,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:02.91,Default,,0,0,0,,{\kf16}We {\kf24}had {\kf16}to {\kf72}literally {\kf64}convince {\kf32}her, {\kf48}saying {\kf16}we
+Dialogue: 0,0:00:02.91,0:00:05.50,Default,,0,0,0,,{\kf40}might {\kf24}all {\kf32}move {\kf32}away {\kf40}after {\kf24}uni {\kf24}and {\kf40}these
+Dialogue: 0,0:00:05.50,0:00:07.37,Default,,0,0,0,,{\kf24}are {\kf24}the {\kf24}few {\kf40}years {\kf16}we {\kf24}get {\kf16}to {\kf16}do
+Dialogue: 0,0:00:07.37,0:00:10.61,Default,,0,0,0,,{\kf24}fun {\kf40}stuff {\kf32}like {\kf40}this. {\kf24}She {\kf81}eventually {\kf56}agreed, {\kf24}but
+Dialogue: 0,0:00:10.61,0:00:13.53,Default,,0,0,0,,{\kf16}at {\kf16}my {\kf40}place {\kf24}she {\kf40}acted {\kf32}very {\kf97}uninterested {\kf24}the
+Dialogue: 0,0:00:13.53,0:00:16.20,Default,,0,0,0,,{\kf40}whole {\kf40}time. {\kf40}She’s {\kf32}also {\kf24}the {\kf32}type {\kf24}who {\kf32}acts
+Dialogue: 0,0:00:16.20,0:00:19.03,Default,,0,0,0,,{\kf32}like {\kf40}girls {\kf24}who {\kf16}do {\kf48}makeup {\kf24}are {\kf81}“inferior” {\kf16}or
+Dialogue: 0,0:00:19.03,0:00:19.85,Default,,0,0,0,,{\kf81}something.
+Dialogue: 0,0:00:20.25,0:00:22.39,Default,,0,0,0,,{\kf22}She {\kf36}would {\kf22}say {\kf36}stuff {\kf29}like {\kf22}“do {\kf14}I {\kf29}even
+Dialogue: 0,0:00:22.39,0:00:25.49,Default,,0,0,0,,{\kf29}need {\kf81}lipstick?”, {\kf44}“won’t {\kf14}I {\kf29}look {\kf29}more {\kf29}fair {\kf51}without
+Dialogue: 0,0:00:25.49,0:00:28.81,Default,,0,0,0,,{\kf36}it?”, {\kf51}“what’s {\kf51}blush?” {\kf22}and {\kf29}kept {\kf44}making {\kf59}comments {\kf36}about
+Dialogue: 0,0:00:28.81,0:00:30.87,Default,,0,0,0,,{\kf22}us. {\kf14}We {\kf51}ignored {\kf22}it, {\kf22}and {\kf29}once {\kf22}she {\kf22}saw
+Dialogue: 0,0:00:30.87,0:00:34.34,Default,,0,0,0,,{\kf14}we {\kf51}weren’t {\kf66}reacting, {\kf22}she {\kf59}suddenly {\kf59}switched {\kf22}and {\kf51}started
+Dialogue: 0,0:00:34.34,0:00:36.78,Default,,0,0,0,,{\kf44}asking {\kf22}for {\kf66}lipstick, {\kf44}asking {\kf14}us {\kf14}to {\kf14}do {\kf22}her
+Dialogue: 0,0:00:36.78,0:00:40.25,Default,,0,0,0,,{\kf36}eyes, {\kf73}etcetera., {\kf29}like {\kf22}she {\kf51}clearly {\kf29}knew {\kf29}what {\kf73}everything
+Dialogue: 0,0:00:40.25,0:00:40.54,Default,,0,0,0,,{\kf29}was.
+Dialogue: 0,0:00:40.94,0:00:43.84,Default,,0,0,0,,{\kf33}Fast {\kf57}forward {\kf16}to {\kf24}now {\kf41}she’s {\kf41}moved {\kf49}really {\kf24}far
+Dialogue: 0,0:00:43.84,0:00:46.82,Default,,0,0,0,,{\kf33}away {\kf24}for {\kf41}work, {\kf57}earning {\kf33}well {\kf33}too, {\kf49}though {\kf24}she
+Dialogue: 0,0:00:46.82,0:00:49.96,Default,,0,0,0,,{\kf49}hasn’t {\kf57}started {\kf41}yet,. {\kf16}My {\kf41}other {\kf49}friend {\kf24}has {\kf33}also
+Dialogue: 0,0:00:49.96,0:00:51.94,Default,,0,0,0,,{\kf74}shifted.. {\kf49}Follow {\kf24}for {\kf33}part {\kf16}3.

@@ -151,7 +151,6 @@ def search_medal_clips(game_name, keywords, num_clips=5):
 # ── VIDEO ASSEMBLER ──────────────────────────────────────────
 def create_short_video(clip_paths, audio_path, ass_path, output="final_short.mp4", is_vertical=True):
     from moviepy import AudioFileClip, VideoFileClip, concatenate_videoclips
-
     voice = AudioFileClip(audio_path)
     total_duration = voice.duration
 
@@ -160,6 +159,8 @@ def create_short_video(clip_paths, audio_path, ass_path, output="final_short.mp4
     for path in clip_paths:
         try:
             clip = VideoFileClip(path).without_audio()
+            clip = clip.resized(height=1080)
+            
             clips.append(clip)
             total_clip_dur += clip.duration
         except Exception as e:
@@ -186,7 +187,9 @@ def create_short_video(clip_paths, audio_path, ass_path, output="final_short.mp4
     else:
         vf = f"scale=1920:1080:force_original_aspect_ratio=increase,crop=1920:1080,subtitles='{ass_abs}'"
 
-    cmd = ["ffmpeg", "-y", "-i", temp_path, "-vf", vf, "-c:a", "copy", "-b:v", "8000k", output]
+    import imageio_ffmpeg
+    ffmpeg_exe = imageio_ffmpeg.get_ffmpeg_exe()
+    cmd = [ffmpeg_exe, "-y", "-i", temp_path, "-vf", vf, "-c:v", "libx264", "-pix_fmt", "yuv420p", "-c:a", "copy", "-b:v", "8000k", output]
     result = subprocess.run(cmd, capture_output=True, text=True)
 
     if os.path.exists(temp_path):
@@ -244,14 +247,15 @@ def run_pipeline(story, game_name, voice_preset, is_vertical, highlight_color,
             # 2. Karaoke subs
             root.after(0, lambda: status_label.config(text=f"Karaoke subs..."))
             if sub_style == "Word-by-word":
-                generate_karaoke_ass(timings, output_ass=ass_file, font_size=21,
+                generate_karaoke_ass(timings, output_ass=ass_file, font_size=65,
                                       highlight_color=highlight_color,
                                       is_vertical=is_vertical,
                                       words_per_group=words_per_group)
             else:
-                generate_karaoke_simple(timings, output_ass=ass_file, font_size=21,
+                generate_karaoke_simple(timings, output_ass=ass_file, font_size=65,
                                          highlight_color=highlight_color,
-                                         is_vertical=is_vertical)
+                                         is_vertical=is_vertical,
+                                         words_per_group=words_per_group)
 
             # 3. Medal clips
             audio_dur = get_video_duration(audio_path)

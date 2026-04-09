@@ -1,7 +1,7 @@
 """
 main_shorts_local.py — GUI pt Shorts/TikTok:
-  Reddit stories + Medal.tv gaming clips + Kokoro TTS
-  Karaoke-style subtitles (cuvant cu cuvant, ca pe TikTok)
+  Reddit stories + Medal.tv clips + Kokoro TTS + Karaoke subs
+  Features: clip splitting, keyword search, text cleaning
 NU se pune pe git (e in .gitignore).
 """
 import tkinter as tk
@@ -13,8 +13,9 @@ import tempfile
 
 from voice_gen.kokoro_narration import generate_voice, VOICE_PRESETS
 from voice_gen.karaoke_subs import generate_karaoke_ass, generate_karaoke_simple
+from voice_gen.tts_cleaner import clean_for_tts, split_into_parts
 from shorts_gen.reddit import get_reddit_stories, format_story_for_tts
-from videoclips_gen.medal_fetcher import fetch_gaming_clips
+from videoclips_gen.medal_fetcher import fetch_gaming_clips, get_trending_clips, download_clips
 
 BG_MAIN = "#0f0f1a"
 BG_CARD = "#1a1a2e"
@@ -29,7 +30,6 @@ ENTRY_FG = "#e0e0e0"
 
 PREVIEW_TEXT = "The universe is vast and full of mysteries waiting to be discovered."
 
-# Highlight color options (ASS BGR format)
 HIGHLIGHT_COLORS = {
     "🟡 Yellow": "&H0000FFFF",
     "🔴 Red":    "&H000000FF",
@@ -39,11 +39,30 @@ HIGHLIGHT_COLORS = {
     "🟣 Pink":   "&H00FF00FF",
 }
 
+POPULAR_SUBS = [
+    "AmItheAsshole", "tifu", "confession", "relationship_advice",
+    "MaliciousCompliance", "pettyrevenge", "ProRevenge", "entitledparents",
+    "TrueOffMyChest", "nosleep", "LetsNotMeet", "UnresolvedMysteries",
+    "askreddit", "todayilearned", "Showerthoughts"
+]
+
+MEDAL_KEYWORDS = [
+    "pvp", "montage", "parkour", "clutch", "ace", "headshot",
+    "trickshot", "snipe", "flick", "wallbang", "collateral",
+    "teamkill", "fail", "funny", "insane", "epic", "rage",
+    "1v5", "1v4", "1v3", "deagle", "knife", "noscope",
+    "speedrun", "world record", "glitch", "bug", "hack",
+]
+
 
 def cleanup():
     for f in ["short_audio.wav", "short_subs.ass", "short_subs.srt",
               "final_short.mp4", "temp_short_nosubs.mp4"]:
         if os.path.exists(f):
+            os.remove(f)
+    # Cleanup multi-part files
+    for f in os.listdir('.'):
+        if f.startswith('final_short_part') and f.endswith('.mp4'):
             os.remove(f)
 
 
@@ -81,14 +100,58 @@ def preview_voice():
     threading.Thread(target=do_preview, daemon=True).start()
 
 
-# ── SHORT VIDEO ASSEMBLER (KARAOKE ASS) ─────────────────────
+# ── MEDAL KEYWORD SEARCH ────────────────────────────────────
+def search_medal_clips(game_name, keywords, num_clips=5):
+    """
+    Cauta clipuri pe Medal dupa keywords.
+    Combina game name + keywords in search query.
+    """
+    from videoclips_gen.medal_fetcher import resolve_api_key, find_game_id, fetch_json, load_proxies
+    import requests
+
+    api_key = resolve_api_key(game_name)
+    if not api_key:
+        return []
+
+    headers = {"Authorization": api_key}
+    proxies = load_proxies()
+    all_clips = []
+
+    for kw in keywords:
+        query = f"{game_name} {kw}".strip()
+        url = f"https://developers.medal.tv/v1/search?text={query}&limit=5"
+        print(f"[Medal Search] '{query}'...")
+
+        data, _, _ = fetch_json(url, headers, proxies, 0, 0)
+        if data and "contentObjects" in data:
+            all_clips.extend(data["contentObjects"])
+
+    # Deduplicate
+    seen = set()
+    unique = []
+    for c in all_clips:
+        cid = c.get("contentId", "")
+        if cid not in seen:
+            seen.add(cid)
+            unique.append(c)
+
+    # Filter montages, short clips
+    skip_words = ["montage", "edit", "intro", "cinematic", "trailer", "movavi", "filmora"]
+    filtered = [c for c in unique
+                if not any(w in c.get("contentTitle", "").lower() for w in skip_words)
+                and 5 <= c.get("videoLengthSeconds", 0) <= 60]
+
+    if not filtered:
+        filtered = unique
+
+    filtered.sort(key=lambda c: c.get("contentViews", 0), reverse=True)
+    return download_clips(filtered, max_clips=num_clips)
+
+
+# ── VIDEO ASSEMBLER ──────────────────────────────────────────
 def create_short_video(clip_paths, audio_path, ass_path, output="final_short.mp4", is_vertical=True):
-    """
-    Medal clips (muted) + Kokoro voice + karaoke ASS subtitles.
-    """
     from moviepy import AudioFileClip, VideoFileClip, concatenate_videoclips
 
-    print(f"[Short] Assembling {len(clip_paths)} clips...")
     voice = AudioFileClip(audio_path)
     total_duration = voice.duration
 
@@ -113,11 +176,9 @@ def create_short_video(clip_paths, audio_path, ass_path, output="final_short.mp4
     video = video.with_audio(voice)
 
     temp_path = "temp_short_nosubs.mp4"
-    print("[Short] Rendering base video...")
     video.write_videofile(temp_path, fps=30, codec="libx264", audio_codec="aac",
                           bitrate="8000k", threads=4)
 
-    # Crop + burn ASS karaoke subtitles
     ass_abs = os.path.abspath(ass_path).replace("\\", "/").replace(":", "\\:")
 
     if is_vertical:
@@ -125,90 +186,109 @@ def create_short_video(clip_paths, audio_path, ass_path, output="final_short.mp4
     else:
         vf = f"scale=1920:1080:force_original_aspect_ratio=increase,crop=1920:1080,ass='{ass_abs}'"
 
-    cmd = [
-        "ffmpeg", "-y",
-        "-i", temp_path,
-        "-vf", vf,
-        "-c:a", "copy",
-        "-b:v", "8000k",
-        output
-    ]
-
-    print("[Short] Cropping & burning karaoke subtitles...")
+    cmd = ["ffmpeg", "-y", "-i", temp_path, "-vf", vf, "-c:a", "copy", "-b:v", "8000k", output]
     result = subprocess.run(cmd, capture_output=True, text=True)
 
     if os.path.exists(temp_path):
         os.remove(temp_path)
 
     if result.returncode == 0:
-        print(f"[Short] DONE! → {output}")
         return True, output
     else:
-        print(f"[Short] ffmpeg error: {result.stderr[:300]}")
         return False, f"FFmpeg failed: {result.stderr[:200]}"
 
 
 # ── PIPELINE ─────────────────────────────────────────────────
 def run_pipeline(story, game_name, voice_preset, is_vertical, highlight_color,
-                 sub_style, words_per_group):
+                 sub_style, words_per_group, clip_mode, medal_keywords, do_split):
     try:
         cleanup()
-        script = format_story_for_tts(story)
 
-        # 1. Voice
-        root.after(0, lambda: status_label.config(text="1/4: Generating voice..."))
-        audio_path, timings = generate_voice(script, output_path="short_audio.wav",
-                                              preset=voice_preset)
-        if not audio_path:
-            root.after(0, lambda: messagebox.showerror("Error", "Voice failed!"))
-            return
+        # Clean text for TTS
+        raw_script = format_story_for_tts(story)
+        script = clean_for_tts(raw_script)
+        print(f"[TTS Clean] {len(raw_script)} -> {len(script)} chars")
 
-        # 2. Karaoke subtitles
-        root.after(0, lambda: status_label.config(text="2/4: Karaoke subtitles..."))
-        ass_path = "short_subs.ass"
-
-        if sub_style == "Word-by-word":
-            generate_karaoke_ass(
-                timings, output_ass=ass_path,
-                font_size=21, highlight_color=highlight_color,
-                is_vertical=is_vertical, words_per_group=words_per_group
-            )
+        # Split into parts if needed
+        if do_split:
+            parts = split_into_parts(script, max_seconds=58)
         else:
-            generate_karaoke_simple(
-                timings, output_ass=ass_path,
-                font_size=21, highlight_color=highlight_color,
-                is_vertical=is_vertical
-            )
+            parts = [(1, script)]
 
-        # 3. Medal clips
-        audio_dur = get_video_duration(audio_path)
-        num_clips = max(2, int(audio_dur / 15) + 2)
-        root.after(0, lambda: status_label.config(
-            text=f"3/4: Downloading {num_clips} {game_name} clips..."))
-        clip_paths = fetch_gaming_clips(game_name, num_clips)
+        total_parts = len(parts)
+        if total_parts > 1:
+            print(f"[Split] Story split into {total_parts} parts")
 
-        if not clip_paths:
-            root.after(0, lambda: messagebox.showerror("Error",
-                f"No clips for '{game_name}'.\nCheck MEDAL_GAME_KEY_* in .env"))
-            return
+        for part_num, part_text in parts:
+            part_suffix = f"_part{part_num}" if total_parts > 1 else ""
+            audio_file = f"short_audio{part_suffix}.wav"
+            ass_file = f"short_subs{part_suffix}.ass"
+            out_file = f"final_short{part_suffix}.mp4"
 
-        # 4. Assemble
-        root.after(0, lambda: status_label.config(text="4/4: Rendering short..."))
-        success, msg = create_short_video(clip_paths, audio_path, ass_path,
-                                           output="final_short.mp4",
-                                           is_vertical=is_vertical)
+            if total_parts > 1:
+                # Add "Follow for part X" at the end
+                if part_num < total_parts:
+                    part_text += f". Follow for part {part_num + 1}."
+                root.after(0, lambda p=part_num: status_label.config(
+                    text=f"Part {p}/{total_parts}: Voice..."))
+            else:
+                root.after(0, lambda: status_label.config(text="1/4: Voice..."))
 
-        if success:
-            root.after(0, lambda: status_label.config(text="Done!"))
-            fmt = "9:16 Vertical" if is_vertical else "16:9 Landscape"
+            # 1. Voice
+            audio_path, timings = generate_voice(part_text, output_path=audio_file,
+                                                  preset=voice_preset)
+            if not audio_path:
+                root.after(0, lambda: messagebox.showerror("Error", "Voice failed!"))
+                return
+
+            # 2. Karaoke subs
+            root.after(0, lambda: status_label.config(text=f"Karaoke subs..."))
+            if sub_style == "Word-by-word":
+                generate_karaoke_ass(timings, output_ass=ass_file, font_size=21,
+                                      highlight_color=highlight_color,
+                                      is_vertical=is_vertical,
+                                      words_per_group=words_per_group)
+            else:
+                generate_karaoke_simple(timings, output_ass=ass_file, font_size=21,
+                                         highlight_color=highlight_color,
+                                         is_vertical=is_vertical)
+
+            # 3. Medal clips
+            audio_dur = get_video_duration(audio_path)
+            num_clips = max(2, int(audio_dur / 15) + 2)
+            root.after(0, lambda n=num_clips: status_label.config(
+                text=f"Downloading {n} clips..."))
+
+            if clip_mode == "Keyword" and medal_keywords:
+                clip_paths = search_medal_clips(game_name, medal_keywords, num_clips)
+            else:
+                clip_paths = fetch_gaming_clips(game_name, num_clips)
+
+            if not clip_paths:
+                root.after(0, lambda: messagebox.showerror("Error",
+                    f"No clips for '{game_name}'"))
+                return
+
+            # 4. Assemble
+            root.after(0, lambda: status_label.config(text="Rendering..."))
+            success, msg = create_short_video(clip_paths, audio_path, ass_file,
+                                               output=out_file, is_vertical=is_vertical)
+            if not success:
+                root.after(0, lambda m=msg: messagebox.showerror("Error", m))
+                return
+
+        # Done
+        root.after(0, lambda: status_label.config(text="Done!"))
+        if total_parts > 1:
+            files = ", ".join(f"final_short_part{i}.mp4" for i in range(1, total_parts + 1))
             root.after(0, lambda: messagebox.showinfo("Success",
-                f"Short done!\nDuration: {audio_dur:.0f}s | Format: {fmt}\n→ final_short.mp4"))
+                f"{total_parts} parts generated!\n{files}"))
         else:
-            root.after(0, lambda: messagebox.showerror("Error", msg))
-            root.after(0, lambda: status_label.config(text="Failed"))
+            root.after(0, lambda: messagebox.showinfo("Success",
+                "Short done! → final_short.mp4"))
 
     except Exception as e:
-        root.after(0, lambda: messagebox.showerror("Error", f"Pipeline failed: {e}"))
+        root.after(0, lambda: messagebox.showerror("Error", f"Failed: {e}"))
         root.after(0, lambda: status_label.config(text="Error"))
     finally:
         root.after(0, lambda: btn_generate.config(state=tk.NORMAL))
@@ -224,6 +304,19 @@ def fetch_and_pick():
     h_color = HIGHLIGHT_COLORS.get(combo_highlight.get(), "&H0000FFFF")
     sub_style = combo_sub_style.get()
     wpg = int(spin_wpg.get())
+    clip_mode = combo_clip_mode.get()
+    do_split = var_split.get()
+
+    # Medal keywords
+    medal_kws = []
+    if clip_mode == "Keyword":
+        raw = entry_keywords.get().strip()
+        if raw:
+            medal_kws = [k.strip() for k in raw.split(",") if k.strip()]
+        else:
+            messagebox.showwarning("Warning", "Enter keywords for Medal search!")
+            btn_generate.config(state=tk.NORMAL)
+            return
 
     if not game:
         messagebox.showwarning("Warning", "Enter a game name!")
@@ -236,25 +329,23 @@ def fetch_and_pick():
         if not stories:
             root.after(0, lambda: messagebox.showerror("Error", f"No stories in r/{subreddit}"))
             root.after(0, lambda: btn_generate.config(state=tk.NORMAL))
-            root.after(0, lambda: status_label.config(text="Ready"))
             return
         root.after(0, lambda: show_picker(stories, game, voice, is_vertical,
-                                           h_color, sub_style, wpg))
+                                           h_color, sub_style, wpg, clip_mode,
+                                           medal_kws, do_split))
 
     threading.Thread(target=fetch, daemon=True).start()
 
 
-def show_picker(stories, game, voice, is_vertical, h_color, sub_style, wpg):
+def show_picker(stories, game, voice, is_vertical, h_color, sub_style, wpg,
+                clip_mode, medal_kws, do_split):
     win = tk.Toplevel(root)
-    win.title("Pick a Reddit Story")
+    win.title("Pick a Story")
     win.geometry("550x450")
-    win.resizable(False, False)
     win.configure(bg=BG_MAIN)
 
     tk.Label(win, text="Pick a story:", font=("Segoe UI", 12, "bold"),
              bg=BG_MAIN, fg=FG_TEXT).pack(pady=(15, 5))
-    tk.Label(win, text=f"Game: {game} | Voice: {voice.split('-')[0].strip()}",
-             font=("Segoe UI", 9), bg=BG_MAIN, fg=FG_DIM).pack(pady=(0, 10))
 
     frame = tk.Frame(win, bg=BG_MAIN)
     frame.pack(fill=tk.BOTH, expand=True, padx=15, pady=5)
@@ -262,15 +353,19 @@ def show_picker(stories, game, voice, is_vertical, h_color, sub_style, wpg):
     sb.pack(side=tk.RIGHT, fill=tk.Y)
     lb = tk.Listbox(frame, width=70, height=15, font=("Segoe UI", 10),
                      bg=BG_CARD, fg=FG_TEXT, selectbackground=ACCENT,
-                     selectforeground="white", borderwidth=0,
-                     yscrollcommand=sb.set)
+                     selectforeground="white", borderwidth=0, yscrollcommand=sb.set)
     lb.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
     sb.config(command=lb.yview)
 
     for s in stories:
         words = len(s['body'].split())
         est = int(words / 2.5)
-        lb.insert(tk.END, f"[{est}s] {s['title'][:70]}")
+        parts_est = max(1, est // 58)
+        tag = f"[{est}s"
+        if parts_est > 1 and do_split:
+            tag += f", {parts_est} parts"
+        tag += "]"
+        lb.insert(tk.END, f"{tag} {s['title'][:65]}")
 
     def on_select():
         sel = lb.curselection()
@@ -279,34 +374,22 @@ def show_picker(stories, game, voice, is_vertical, h_color, sub_style, wpg):
         win.destroy()
         threading.Thread(target=run_pipeline,
                          args=(stories[sel[0]], game, voice, is_vertical,
-                               h_color, sub_style, wpg), daemon=True).start()
+                               h_color, sub_style, wpg, clip_mode,
+                               medal_kws, do_split), daemon=True).start()
 
-    def on_close():
-        win.destroy()
-        btn_generate.config(state=tk.NORMAL)
-        status_label.config(text="Ready")
-
-    win.protocol("WM_DELETE_WINDOW", on_close)
+    win.protocol("WM_DELETE_WINDOW", lambda: [win.destroy(), btn_generate.config(state=tk.NORMAL)])
     tk.Button(win, text="Generate Short", font=("Segoe UI", 11, "bold"),
               bg=ACCENT, fg="white", activebackground=ACCENT_ACTIVE,
               cursor="hand2", relief="flat", padx=20, pady=8,
               command=on_select).pack(pady=10)
 
 
-# ── SUBREDDIT PICKER ─────────────────────────────────────────
-POPULAR_SUBS = [
-    "AmItheAsshole", "tifu", "confession", "relationship_advice",
-    "MaliciousCompliance", "pettyrevenge", "ProRevenge", "entitledparents",
-    "TrueOffMyChest", "nosleep", "LetsNotMeet", "UnresolvedMysteries",
-    "askreddit", "todayilearned", "Showerthoughts"
-]
-
 def show_sub_picker():
     win = tk.Toplevel(root)
     win.title("Subreddits")
     win.geometry("300x420")
     win.configure(bg=BG_MAIN)
-    tk.Label(win, text="Pick a subreddit:", font=("Segoe UI", 11, "bold"),
+    tk.Label(win, text="Pick:", font=("Segoe UI", 11, "bold"),
              bg=BG_MAIN, fg=FG_TEXT).pack(pady=(10, 5))
     for sub in POPULAR_SUBS:
         tk.Button(win, text=f"r/{sub}", font=("Segoe UI", 10), anchor="w",
@@ -317,16 +400,53 @@ def show_sub_picker():
                                           entry_subreddit.insert(0, s)]).pack(pady=1, padx=15)
 
 
+def show_keyword_picker():
+    win = tk.Toplevel(root)
+    win.title("Medal Keywords")
+    win.geometry("300x500")
+    win.configure(bg=BG_MAIN)
+    tk.Label(win, text="Pick keywords:", font=("Segoe UI", 11, "bold"),
+             bg=BG_MAIN, fg=FG_TEXT).pack(pady=(10, 5))
+    tk.Label(win, text="Click to add (comma-separated)", font=("Segoe UI", 8),
+             bg=BG_MAIN, fg=FG_DIM).pack()
+
+    for kw in MEDAL_KEYWORDS:
+        tk.Button(win, text=kw, font=("Segoe UI", 10), anchor="w",
+                  padx=15, pady=2, bg=BG_CARD, fg=FG_TEXT,
+                  activebackground=ACCENT2, activeforeground="white",
+                  cursor="hand2", width=25, relief="flat",
+                  command=lambda k=kw: add_keyword(k)).pack(pady=1, padx=15)
+
+def add_keyword(kw):
+    current = entry_keywords.get().strip()
+    if current:
+        existing = [k.strip().lower() for k in current.split(",")]
+        if kw.lower() not in existing:
+            entry_keywords.delete(0, tk.END)
+            entry_keywords.insert(0, f"{current}, {kw}")
+    else:
+        entry_keywords.insert(0, kw)
+
+
+def on_clip_mode_change(*args):
+    mode = combo_clip_mode.get()
+    if mode == "Keyword":
+        kw_frame.pack(after=combo_clip_mode.master, fill=tk.X, pady=(4, 0))
+    else:
+        kw_frame.pack_forget()
+
+
 # ── GUI ──────────────────────────────────────────────────────
 def run():
     global root, btn_generate, btn_preview, combo_voice
-    global entry_subreddit, entry_game, var_format, status_label
+    global entry_subreddit, entry_game, entry_keywords, var_format, status_label
     global combo_highlight, combo_sub_style, spin_wpg
+    global combo_clip_mode, kw_frame, var_split
 
     root = tk.Tk()
     root.title("Shorts Generator (Local)")
-    root.geometry("480x780")
-    root.resizable(False, False)
+    root.geometry("490x850")
+    root.resizable(False, True)
     root.configure(bg=BG_MAIN)
 
     style = ttk.Style()
@@ -339,20 +459,33 @@ def run():
     fe = ("Segoe UI", 10)
     fh = ("Segoe UI", 8)
 
+    # Scrollable
+    outer = tk.Frame(root, bg=BG_MAIN)
+    outer.pack(fill=tk.BOTH, expand=True)
+    canvas = tk.Canvas(outer, bg=BG_MAIN, highlightthickness=0)
+    scrollbar = tk.Scrollbar(outer, orient=tk.VERTICAL, command=canvas.yview)
+    canvas.configure(yscrollcommand=scrollbar.set)
+    scrollbar.pack(side=tk.RIGHT, fill=tk.Y)
+    canvas.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
+    content = tk.Frame(canvas, bg=BG_MAIN)
+    cw = canvas.create_window((0, 0), window=content, anchor="nw")
+    canvas.bind("<Configure>", lambda e: canvas.itemconfig(cw, width=e.width))
+    content.bind("<Configure>", lambda e: canvas.configure(scrollregion=canvas.bbox("all")))
+    canvas.bind_all("<MouseWheel>", lambda e: canvas.yview_scroll(int(-1*(e.delta/120)), "units"))
+
     # Header
-    hdr = tk.Frame(root, bg=BG_MAIN)
-    hdr.pack(fill=tk.X, pady=(12, 6))
-    tk.Label(hdr, text="⚡ SHORTS GENERATOR", font=("Segoe UI", 16, "bold"),
+    hdr = tk.Frame(content, bg=BG_MAIN)
+    hdr.pack(fill=tk.X, pady=(10, 5))
+    tk.Label(hdr, text="⚡ SHORTS GENERATOR", font=("Segoe UI", 15, "bold"),
              bg=BG_MAIN, fg=FG_TEXT).pack()
-    tk.Label(hdr, text="Reddit + Medal Clips + Kokoro + Karaoke Subs",
+    tk.Label(hdr, text="Reddit + Medal + Kokoro + Karaoke",
              font=("Segoe UI", 9), bg=BG_MAIN, fg=ACCENT).pack()
 
     # ── STORY ──
-    c1 = tk.Frame(root, bg=BG_CARD, padx=15, pady=10,
+    c1 = tk.Frame(content, bg=BG_CARD, padx=15, pady=10,
                   highlightthickness=1, highlightbackground="#2a2a4a")
     c1.pack(fill=tk.X, padx=15, pady=4)
-    tk.Label(c1, text="📖 STORY", font=("Segoe UI", 9, "bold"),
-             bg=BG_CARD, fg=FG_DIM).pack(anchor="w", pady=(0, 4))
+    tk.Label(c1, text="📖 STORY", font=("Segoe UI", 9, "bold"), bg=BG_CARD, fg=FG_DIM).pack(anchor="w", pady=(0, 4))
 
     r1 = tk.Frame(c1, bg=BG_CARD)
     r1.pack(fill=tk.X, pady=2)
@@ -363,15 +496,19 @@ def run():
     entry_subreddit.insert(0, "AmItheAsshole")
     entry_subreddit.pack(side=tk.LEFT, fill=tk.X, expand=True, padx=(8, 5))
     tk.Button(r1, text="📋", font=("Segoe UI", 10), bg=ACCENT2, fg="white",
-              activebackground=ACCENT2_ACTIVE, cursor="hand2", relief="flat",
-              padx=6, command=show_sub_picker).pack(side=tk.RIGHT)
+              cursor="hand2", relief="flat", padx=6, command=show_sub_picker).pack(side=tk.RIGHT)
+
+    # Split toggle
+    var_split = tk.BooleanVar(value=True)
+    tk.Checkbutton(c1, text="Auto-split long stories (Follow for part 2...)",
+                   variable=var_split, font=fh, bg=BG_CARD, fg=FG_TEXT,
+                   selectcolor=BG_CARD, activebackground=BG_CARD).pack(anchor="w", pady=(4, 0))
 
     # ── BACKGROUND ──
-    c2 = tk.Frame(root, bg=BG_CARD, padx=15, pady=10,
+    c2 = tk.Frame(content, bg=BG_CARD, padx=15, pady=10,
                   highlightthickness=1, highlightbackground="#2a2a4a")
     c2.pack(fill=tk.X, padx=15, pady=4)
-    tk.Label(c2, text="🎮 BACKGROUND", font=("Segoe UI", 9, "bold"),
-             bg=BG_CARD, fg=FG_DIM).pack(anchor="w", pady=(0, 4))
+    tk.Label(c2, text="🎮 CLIPS", font=("Segoe UI", 9, "bold"), bg=BG_CARD, fg=FG_DIM).pack(anchor="w", pady=(0, 4))
 
     r2 = tk.Frame(c2, bg=BG_CARD)
     r2.pack(fill=tk.X, pady=2)
@@ -382,29 +519,48 @@ def run():
     entry_game.insert(0, "Minecraft")
     entry_game.pack(side=tk.LEFT, fill=tk.X, expand=True)
 
+    r3 = tk.Frame(c2, bg=BG_CARD)
+    r3.pack(fill=tk.X, pady=2)
+    tk.Label(r3, text="Mode:", font=fl, bg=BG_CARD, fg=FG_TEXT, width=7, anchor="w").pack(side=tk.LEFT)
+    combo_clip_mode = ttk.Combobox(r3, values=["Trending", "Keyword"],
+                                    state="readonly", font=fe)
+    combo_clip_mode.set("Trending")
+    combo_clip_mode.pack(side=tk.LEFT, fill=tk.X, expand=True)
+    combo_clip_mode.bind("<<ComboboxSelected>>", on_clip_mode_change)
+
+    # Keyword search frame (hidden by default)
+    kw_frame = tk.Frame(c2, bg=BG_CARD)
+    kw_r = tk.Frame(kw_frame, bg=BG_CARD)
+    kw_r.pack(fill=tk.X, pady=2)
+    tk.Label(kw_r, text="Keywords:", font=fl, bg=BG_CARD, fg=FG_TEXT).pack(side=tk.LEFT)
+    entry_keywords = tk.Entry(kw_r, font=fe, bg=ENTRY_BG, fg=ENTRY_FG, relief="flat",
+                               insertbackground=FG_TEXT, highlightthickness=1,
+                               highlightbackground="#2a2a4a", highlightcolor=ACCENT)
+    entry_keywords.pack(side=tk.LEFT, fill=tk.X, expand=True, padx=(5, 5))
+    tk.Button(kw_r, text="🏷️", font=("Segoe UI", 10), bg=ACCENT2, fg="white",
+              cursor="hand2", relief="flat", padx=6,
+              command=show_keyword_picker).pack(side=tk.RIGHT)
+    tk.Label(kw_frame, text="comma-separated: pvp, clutch, ace...",
+             font=fh, bg=BG_CARD, fg=FG_DIM).pack(anchor="w")
+
     # ── FORMAT ──
-    c3 = tk.Frame(root, bg=BG_CARD, padx=15, pady=10,
+    c3 = tk.Frame(content, bg=BG_CARD, padx=15, pady=10,
                   highlightthickness=1, highlightbackground="#2a2a4a")
     c3.pack(fill=tk.X, padx=15, pady=4)
-    tk.Label(c3, text="📐 FORMAT", font=("Segoe UI", 9, "bold"),
-             bg=BG_CARD, fg=FG_DIM).pack(anchor="w", pady=(0, 4))
-
+    tk.Label(c3, text="📐 FORMAT", font=("Segoe UI", 9, "bold"), bg=BG_CARD, fg=FG_DIM).pack(anchor="w", pady=(0, 4))
     fmt = tk.Frame(c3, bg=BG_CARD)
     fmt.pack(fill=tk.X)
     var_format = tk.StringVar(value="Vertical")
     tk.Radiobutton(fmt, text="TikTok 9:16", variable=var_format, value="Vertical",
-                   bg=BG_CARD, fg=FG_TEXT, selectcolor=BG_CARD,
-                   activebackground=BG_CARD, font=fe).pack(side=tk.LEFT)
+                   bg=BG_CARD, fg=FG_TEXT, selectcolor=BG_CARD, font=fe).pack(side=tk.LEFT)
     tk.Radiobutton(fmt, text="YouTube 16:9", variable=var_format, value="Landscape",
-                   bg=BG_CARD, fg=FG_TEXT, selectcolor=BG_CARD,
-                   activebackground=BG_CARD, font=fe).pack(side=tk.LEFT, padx=15)
+                   bg=BG_CARD, fg=FG_TEXT, selectcolor=BG_CARD, font=fe).pack(side=tk.LEFT, padx=15)
 
     # ── SUBTITLES ──
-    c5 = tk.Frame(root, bg=BG_CARD, padx=15, pady=10,
+    c5 = tk.Frame(content, bg=BG_CARD, padx=15, pady=10,
                   highlightthickness=1, highlightbackground="#2a2a4a")
     c5.pack(fill=tk.X, padx=15, pady=4)
-    tk.Label(c5, text="✨ KARAOKE SUBTITLES", font=("Segoe UI", 9, "bold"),
-             bg=BG_CARD, fg=FG_DIM).pack(anchor="w", pady=(0, 4))
+    tk.Label(c5, text="✨ KARAOKE", font=("Segoe UI", 9, "bold"), bg=BG_CARD, fg=FG_DIM).pack(anchor="w", pady=(0, 4))
 
     rs1 = tk.Frame(c5, bg=BG_CARD)
     rs1.pack(fill=tk.X, pady=2)
@@ -430,16 +586,13 @@ def run():
     spin_wpg.delete(0, tk.END)
     spin_wpg.insert(0, "5")
     spin_wpg.pack(side=tk.LEFT)
-    tk.Label(rs3, text="per group (Word-by-word only)", font=fh,
-             bg=BG_CARD, fg=FG_DIM).pack(side=tk.LEFT, padx=8)
+    tk.Label(rs3, text="per screen", font=fh, bg=BG_CARD, fg=FG_DIM).pack(side=tk.LEFT, padx=8)
 
     # ── VOICE ──
-    c4 = tk.Frame(root, bg=BG_CARD, padx=15, pady=10,
+    c4 = tk.Frame(content, bg=BG_CARD, padx=15, pady=10,
                   highlightthickness=1, highlightbackground="#2a2a4a")
     c4.pack(fill=tk.X, padx=15, pady=4)
-    tk.Label(c4, text="🎙️ VOICE", font=("Segoe UI", 9, "bold"),
-             bg=BG_CARD, fg=FG_DIM).pack(anchor="w", pady=(0, 4))
-
+    tk.Label(c4, text="🎙️ VOICE", font=("Segoe UI", 9, "bold"), bg=BG_CARD, fg=FG_DIM).pack(anchor="w", pady=(0, 4))
     rv = tk.Frame(c4, bg=BG_CARD)
     rv.pack(fill=tk.X, pady=2)
     combo_voice = ttk.Combobox(rv, values=list(VOICE_PRESETS.keys()),
@@ -453,19 +606,19 @@ def run():
     btn_preview.pack(side=tk.RIGHT)
 
     # ── GENERATE ──
-    btn_generate = tk.Button(root, text="Fetch Stories & Generate",
+    btn_generate = tk.Button(content, text="Fetch Stories & Generate",
                               font=("Segoe UI", 13, "bold"),
                               bg=ACCENT, fg="white", activebackground=ACCENT_ACTIVE,
-                              activeforeground="white", relief="flat", cursor="hand2",
-                              pady=12, command=fetch_and_pick)
-    btn_generate.pack(fill=tk.X, padx=15, pady=(12, 5))
+                              relief="flat", cursor="hand2", pady=12,
+                              command=fetch_and_pick)
+    btn_generate.pack(fill=tk.X, padx=15, pady=(10, 5))
 
-    status_label = tk.Label(root, text="Ready", font=("Segoe UI", 10),
+    status_label = tk.Label(content, text="Ready", font=("Segoe UI", 10),
                              bg=BG_MAIN, fg=FG_DIM)
     status_label.pack(pady=3)
 
-    tk.Label(root, text="Reddit → Kokoro → Medal Clips → Karaoke ASS → FFmpeg",
-             font=fh, bg=BG_MAIN, fg=FG_DIM).pack(side=tk.BOTTOM, pady=8)
+    tk.Label(content, text="Reddit → Clean → Kokoro → Medal → Karaoke → FFmpeg",
+             font=fh, bg=BG_MAIN, fg=FG_DIM).pack(pady=(0, 10))
 
     root.mainloop()
 

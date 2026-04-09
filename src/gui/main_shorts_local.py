@@ -182,9 +182,9 @@ def create_short_video(clip_paths, audio_path, ass_path, output="final_short.mp4
     ass_abs = os.path.abspath(ass_path).replace("\\", "/").replace(":", "\\:")
 
     if is_vertical:
-        vf = f"crop=ih*(9/16):ih,scale=1080:1920,ass='{ass_abs}'"
+        vf = f"crop=ih*(9/16):ih,scale=1080:1920,subtitles='{ass_abs}'"
     else:
-        vf = f"scale=1920:1080:force_original_aspect_ratio=increase,crop=1920:1080,ass='{ass_abs}'"
+        vf = f"scale=1920:1080:force_original_aspect_ratio=increase,crop=1920:1080,subtitles='{ass_abs}'"
 
     cmd = ["ffmpeg", "-y", "-i", temp_path, "-vf", vf, "-c:a", "copy", "-b:v", "8000k", output]
     result = subprocess.run(cmd, capture_output=True, text=True)
